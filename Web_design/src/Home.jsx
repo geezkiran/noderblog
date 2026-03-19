@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
-  ArrowRight, Sparkles, LayoutGrid, Clock, Puzzle, Monitor, ChevronRight,
-  Zap, Shield, Globe, Target, Command, Home
+  ArrowRight, Sparkles, LibraryBig,
+  Zap, Shield, Globe, Target, Command, PackagePlus, Sparkle
 } from 'lucide-react';
 import './index.css';
-import noderLogo from './noder.png';
-import dashboardImg from './assets/Light.png';
+import noderLogo from './assets/noder.png';
+import dashboardImg from './assets/Timeline 1.webp';
 
-function App() {
+function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const lastScrollY = useRef(0);
@@ -16,7 +16,7 @@ function App() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > 50) {
+      if (currentScrollY > 70) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -35,6 +35,25 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const elements = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="noder-app">
       <div className={`header-wrapper ${isScrolled ? 'scrolled' : ''} ${isHidden ? 'hidden' : ''}`}>
@@ -50,7 +69,7 @@ function App() {
             <a href="#">Story</a>
           </nav>
 
-          <button className="btn btn-primary"> Get Started<ArrowRight size={16} /></button>
+          <button className="btn btn-primary"> <Sparkle size={16} /> Get Started</button>
         </header>
       </div>
 
@@ -62,25 +81,25 @@ function App() {
 
         {/* Right Content Side */}
         <div className="hero-content">
-          <div className="badge">
+          <div className="badge ">
             <Sparkles size={14} className="badge-icon" /> Connecting AI Features
           </div>
 
-          <h1 className="title">
+          <h1 className="title reveal">
             Stay focused, stay<br />
             productive, <span className="title-faded">and<br />get more done</span>
           </h1>
 
-          <div className="feature-pill">
+          <div className="feature-pill ">
             <div className="fp-icon">
-              <Monitor size={24} />
+              <PackagePlus size={24} />
             </div>
             <div className="fp-text">
               <h4>Try our newest feature</h4>
               <p>AI Task, Timeline Sync, Smart Reminders</p>
             </div>
             <div className="fp-arrow">
-              <ArrowRight size={14} />
+              <ArrowRight size={16} />
             </div>
           </div>
         </div>
@@ -100,8 +119,8 @@ function App() {
       <section className="features-section">
         <div className="section-header">
           <div className="badge"><Target size={14} className="badge-icon" /> Why choose us</div>
-          <h2>Everything you need to scale</h2>
-          <p>Powerful features to help your team work faster and smarter.</p>
+          <h2 className='reveal'>Everything you need to scale</h2>
+          <p className='reveal'>Powerful features to help your team work faster and smarter.</p>
         </div>
 
         <div className="bento-grid">
@@ -170,6 +189,7 @@ function App() {
       </footer>
     </div>
   );
+
 }
 
-export default App;
+export default Home;
