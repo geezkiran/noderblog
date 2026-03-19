@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
-  ArrowRight, Sparkles, LibraryBig,
+  ArrowRight, Sparkles,
   Zap, Shield, Globe, Target, Command, PackagePlus, Sparkle
 } from 'lucide-react';
 import './index.css';
