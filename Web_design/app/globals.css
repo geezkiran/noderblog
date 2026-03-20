@@ -71,6 +71,7 @@ body::before {
 .header-wrapper.scrolled {
   background-color: rgba(255, 255, 255, 0.774);
   backdrop-filter: blur(15px);
+  border-bottom: 1.75px solid #b9b9b936;
   box-shadow: var(--shadow-sm);
 }
 
@@ -524,8 +525,8 @@ body::before {
 /* Trusted Section */
 .trusted-section {
   max-width: 1400px;
-  margin: 0px auto 100px;
-  padding: 0 60px;
+  margin: -80px 0px 60px;
+  padding: 0 10px;
   text-align: center;
 }
 
@@ -858,6 +859,7 @@ body::before {
   .hero-image-container {
     width: 100%;
     max-width: 100%;
+    margin-top: -50px;
     aspect-ratio: 2 / 3;
   }
 
@@ -908,6 +910,10 @@ body::before {
   .bento-large,
   .bento-wide {
     grid-column: span 1;
+  }
+
+  .trusted-section {
+    margin-top: -150px;
   }
 
   /* Compact logos row */

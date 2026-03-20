@@ -1,9 +1,11 @@
 .footer {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1240px;
+  margin: 0 auto;
   background-color: #ffffff;
   border-top: 1px solid #e5e7eb;
   padding: 60px 80px 40px;
+  margin-top: 50px;
   box-sizing: border-box;
   font-family: -apple-system, 'Helvetica Neue', sans-serif;
 }

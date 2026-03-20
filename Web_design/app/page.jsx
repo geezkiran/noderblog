@@ -5,10 +5,10 @@ import {
   ArrowRight, Sparkles,
   Zap, Shield, Globe, Target, Command, PackagePlus, Sparkle, ChevronDown, Menu, X, CirclePlus
 } from 'lucide-react';
-import noderLogo from './assets/noder.png';
 import dashboardImg from './assets/Timeline 1.webp';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
+import BentoGrid from '../Components/BentoGrid';
 
 function Home() {
   const router = useRouter();
@@ -59,7 +59,7 @@ function Home() {
           <div style={{ display: 'flex', gap: '16px', marginTop: '40px' }}>
             <div className="cta-buttons">
               <button className="btn btn-white" onClick={() => router.push('/signup')}><Sparkle size={17} /> Get Started</button>
-              <button className="btn btn-blue" onClick={() => router.push('/#')}><CirclePlus size={17} /></button>
+              <button className="btn btn-primary" onClick={() => router.push('/#')}><CirclePlus size={17} /></button>
             </div>
           </div>
         </div>
@@ -103,24 +103,11 @@ function Home() {
             <p>Real-time synchronization across all your devices, anywhere in the world.</p>
           </div>
 
-          <div className="bento-card bento-wide">
-            <div className="bento-icon"><Command size={24} /></div>
-            <h3>Command Menu Interface</h3>
-            <p>Navigate your entire workspace, run actions, and find anything instantly with our powerful command menu. Just press CMD+K.</p>
-          </div>
+
         </div>
       </section>
 
-      <section className="cta-section">
-        <div className="cta-content">
-          <h2>Ready to boost your productivity?</h2>
-          <p>Join thousands of teams already using Noder to accomplish more.</p>
-          <div className="cta-buttons">
-            <button className="btn btn-white" onClick={() => router.push('/signup')}>Start for free</button>
-            <button className="btn btn-secondary">Contact Sales</button>
-          </div>
-        </div>
-      </section>
+
 
       <Footer />
     </div>
