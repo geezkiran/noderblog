@@ -821,6 +821,13 @@ body::before {
 
   .header {
     padding: 12px 20px;
+    position: relative;
+  }
+
+  .header-left .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   /* Stack hero vertically: content first, image at bottom */

@@ -1,0 +1,143 @@
+.footer {
+  width: 100%;
+  max-width: 1440px;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  padding: 60px 80px 40px;
+  box-sizing: border-box;
+  font-family: -apple-system, 'Helvetica Neue', sans-serif;
+}
+
+/* ─── Top nav grid ─────────────────────────────────────────── */
+.footerTop {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.groupTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.01em;
+}
+
+.link {
+  font-size: 13.5px;
+  color: #6b7280;
+  text-decoration: none;
+  line-height: 1.4;
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: #111827;
+}
+
+/* ─── Bottom bar ───────────────────────────────────────────── */
+.footerBottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 36px;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* ─── Brand block ──────────────────────────────────────────── */
+.brandBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.socialIcon {
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+}
+
+.socialIcon:hover {
+  color: #111827;
+}
+
+.tagline {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* ─── Compliance badges ────────────────────────────────────── */
+.badgeRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  align-self: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1.5px solid #d1d5db;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  background: transparent;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+/* ─── Responsive ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 48px 40px 36px;
+  }
+
+  .footerTop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 40px 24px 32px;
+  }
+
+  .footerTop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .badgeRow {
+    gap: 8px;
+  }
+}

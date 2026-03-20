@@ -3,12 +3,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import {
   ArrowRight, Sparkles,
-  Zap, Shield, Globe, Target, Command, PackagePlus, Sparkle, ChevronDown, Menu, X
+  Zap, Shield, Globe, Target, Command, PackagePlus, Sparkle, ChevronDown, Menu, X, PanelLeft
 } from 'lucide-react';
 import noderLogo from './assets/noder.png';
 import dashboardImg from './assets/Timeline 1.webp';
-
-
+import Footer from '../Components/Footer';
 
 function Home() {
   const router = useRouter();
@@ -69,10 +68,14 @@ function Home() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle Menu"
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? (
+                <X color="#232323" strokeWidth={1.25} />
+              ) : (
+                <Menu color="#232323" strokeWidth={1.25} />
+              )}
             </button>
             <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
-              <img src={noderLogo.src} alt="Noder" style={{ height: '20px', filter: 'invert(1)', objectFit: 'contain' }} />
+              <img src={noderLogo.src} alt="Noder" style={{ height: '20px', objectFit: 'contain' }} />
             </div>
           </div>
 
@@ -255,31 +258,7 @@ function Home() {
         </div>
       </section>
 
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-brand">
-            <img src={noderLogo.src} alt="Noder" style={{ height: '22px', filter: 'invert(1)', objectFit: 'contain' }} />
-            <p>Making work beautifully simple.</p>
-          </div>
-          <div className="footer-links">
-            <div className="link-group">
-              <h4>Product</h4>
-              <a href="#">Features</a>
-              <a href="#">Integrations</a>
-              <a href="#">Pricing</a>
-            </div>
-            <div className="link-group">
-              <h4>Company</h4>
-              <a href="#">About Us</a>
-              <a href="#">Careers</a>
-              <a href="#">Blog</a>
-            </div>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>&copy; 2026 Noder Inc. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 
