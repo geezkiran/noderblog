@@ -607,6 +607,7 @@ body::before {
 
 .bento-grid {
   display: grid;
+  max-width: 1200px;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(250px, auto);
   gap: 24px;
@@ -626,14 +627,63 @@ body::before {
 }
 
 .bento-card:hover {
-  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
 
 .bento-large {
   grid-column: span 2;
   grid-row: span 2;
-  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blurred background layer */
+.bento-large::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.582)),
+    url('assets/X.jpeg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+
+  z-index: 0;
+}
+
+/* Sharp image layer (underneath blur fade) */
+.bento-large::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url('/assets/card.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: -1;
+}
+
+/* Content */
+.bento-large>* {
+  position: relative;
+  z-index: 1;
+}
+
+.bento-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 40px;
+  max-width: 70%;
 }
 
 .bento-wide {
@@ -859,7 +909,7 @@ body::before {
   .hero-image-container {
     width: 100%;
     max-width: 100%;
-    margin-top: -50px;
+    margin-top: -30px;
     aspect-ratio: 2 / 3;
   }
 
@@ -897,6 +947,12 @@ body::before {
   .bento-large,
   .bento-wide {
     grid-column: span 1;
+  }
+
+  .bento-content {
+    max-width: 100%;
+    padding: 32px 24px 24px 24px;
+    box-sizing: border-box;
   }
 
   .trusted-section {

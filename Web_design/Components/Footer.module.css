@@ -48,6 +48,7 @@
 /* ─── Bottom bar ───────────────────────────────────────────── */
 .footerBottom {
   display: flex;
+  max-width: 1240px;
   align-items: flex-start;
   justify-content: space-between;
   padding-top: 36px;

@@ -85,10 +85,11 @@ function Home() {
 
         <div className="bento-grid">
           <div className="bento-card bento-large">
-            <div className="bento-icon"><Zap size={24} /></div>
-            <h3>Lightning Fast Performance</h3>
-            <p>Our infrastructure is optimized for speed, ensuring your team never experiences lag or downtime. Work at the speed of thought.</p>
-            <div className="bento-graphic bg-pattern-1"></div>
+            <div className="bento-content">
+              <div className="bento-icon"><Zap size={24} /></div>
+              <h3>Lightning Fast Performance</h3>
+              <p>Our infrastructure is optimized for speed, ensuring your team never experiences lag or downtime. Work at the speed of thought.</p>
+            </div>
           </div>
 
           <div className="bento-card">
@@ -102,15 +103,14 @@ function Home() {
             <h3>Global Sync</h3>
             <p>Real-time synchronization across all your devices, anywhere in the world.</p>
           </div>
-
-
         </div>
-      </section>
+
+      </section >
 
 
 
       <Footer />
-    </div>
+    </div >
   );
 
 }
