@@ -245,7 +245,7 @@ body::before {
 }
 
 .mobile-menu-content {
-  padding: 40px 40px 30px;
+  padding: 40px 30px 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px 16px;
@@ -417,15 +417,35 @@ body::before {
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -2.5px;
-  color: var(--text-primary);
   margin-bottom: 0;
+
+  background: linear-gradient(135deg,
+      #202020,
+      #424242);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title-faded {
   color: #c0c0c0;
+  background: linear-gradient(135deg,
+      #969696,
+      #b9b9b9);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+.section-header h2 {
+  background: linear-gradient(135deg,
+      #202020,
+      #232323,
+      #424242);
 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 
 .fp-icon {
@@ -834,6 +854,21 @@ body::before {
 
   .badge {
     margin-bottom: 20px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+    width: fit-content;
   }
 
   /* Scale down title */

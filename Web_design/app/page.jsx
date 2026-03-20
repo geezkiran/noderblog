@@ -192,7 +192,7 @@ function Home() {
           <div style={{ display: 'flex', gap: '16px', marginTop: '40px' }}>
             <div className="cta-buttons">
               <button className="btn btn-white" onClick={() => router.push('/signup')}><Sparkle size={16} /> Get Started</button>
-              <button className="btn btn-secondary">Learn more</button>
+              <button className="btn btn-white" onClick={() => router.push('/#')}><ArrowRight size={16} /> Learn more</button>
             </div>
           </div>
         </div>

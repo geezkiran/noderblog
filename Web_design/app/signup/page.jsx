@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { ArrowLeft, Mail, Lock, User, Sparkle } from 'lucide-react';
+import { Mail, Lock, User, Sparkle } from 'lucide-react';
 import noderLogo from '../assets/noder.png';
 
 
@@ -15,9 +15,6 @@ function Signup() {
           <div className="logo cursor-pointer" onClick={() => router.push('/')}>
             <img src={noderLogo.src} alt="Noder" style={{ height: '20px', filter: 'invert(1)', objectFit: 'contain' }} />
           </div>
-          <button className="btn btn-secondary" style={{ background: '#f0f0f0', color: '#111', border: 'none' }} onClick={() => router.push('/')}>
-            <ArrowLeft size={16} /> Back to Home
-          </button>
         </header>
       </div>
 
