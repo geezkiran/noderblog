@@ -41,7 +41,8 @@ function Home() {
       <main className="hero-split">
         {/* Left Graphic Side */}
         <div className="hero-image-container">
-          <img src={dashboardImg.src} alt="Dashboard Preview" className="hero-image" />
+          <img src={dashboardImg.src} alt="Dashboard Preview" className="hero-image" onContextMenu={(e) => e.preventDefault()}
+            draggable={false} />
         </div>
 
         {/* Right Content Side */}
