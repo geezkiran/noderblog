@@ -9,6 +9,7 @@ import dashboardImg from './assets/Timeline 1.webp';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
 import BentoGrid from '../Components/BentoGrid';
+import FeatureCarousel from '../Components/FeatureCarousel';
 
 function Home() {
   const router = useRouter();
@@ -120,7 +121,7 @@ function Home() {
 
       </section >
 
-
+      <FeatureCarousel />
 
       <Footer />
     </div >

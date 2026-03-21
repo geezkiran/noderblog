@@ -440,6 +440,7 @@ body::before {
       #202020,
       #424242);
 
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -450,6 +451,7 @@ body::before {
       #969696,
       #b9b9b9);
 
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -460,6 +462,7 @@ body::before {
       #232323,
       #424242);
 
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -556,6 +559,8 @@ body::before {
   display: flex;
   width: max-content;
   animation: scroll-left 25s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .trusted-logos-track:hover {
