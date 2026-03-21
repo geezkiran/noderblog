@@ -1,5 +1,5 @@
 import styles from './Footer.module.css';
-import noderLogo from '../app/assets/noder.png';
+import noderLogo from '../../app/assets/noder.png';
 
 const footerLinks = {
   Product: [

@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata = {
   title: 'Noder',
-  description: 'Join thousands of teams scaling with Noder.',
+  description: 'Start L',
   icons: {
     icon: '/favicon.png',
   },

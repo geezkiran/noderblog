@@ -1,7 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { Sparkles, Sparkle, CirclePlus } from 'lucide-react';
-import dashboardImg from '../app/assets/Timeline 1.webp';
+import dashboardImg from '../../app/assets/Timeline 1.webp';
 import styles from './Hero.module.css';
 
 export default function Hero() {

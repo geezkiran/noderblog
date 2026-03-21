@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { Sparkle, ChevronDown, Menu, X } from 'lucide-react';
-import noderLogo from '../app/assets/noder.png';
+import noderLogo from '../../app/assets/noder.png';
 import styles from './Header.module.css';
 
 export default function Header() {

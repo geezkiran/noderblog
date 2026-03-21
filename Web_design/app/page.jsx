@@ -1,11 +1,11 @@
 'use client';
 import { useEffect } from 'react';
-import Header from '../Components/Header';
-import Footer from '../Components/Footer';
-import Hero from '../Components/Hero';
-import TrustedSection from '../Components/TrustedSection';
-import FeaturesSection from '../Components/FeaturesSection';
-import FeatureCarousel from '../Components/FeatureCarousel';
+import Header from '../Components/Header/Header';
+import Footer from '../Components/Footer/Footer';
+import Hero from '../Components/Hero/Hero';
+import TrustedSection from '../Components/Testimonial/TrustedSection';
+import FeaturesSection from '../Components/FeatureSection/FeaturesSection';
+import FeatureCarousel from '../Components/FeatureCarousel/FeatureCarousel';
 
 export default function Home() {
   useEffect(() => {
