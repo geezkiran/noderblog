@@ -1,0 +1,167 @@
+.featuresSection {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto 120px;
+  padding: 0 60px;
+}
+
+.featuresSection::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(var(--border-color) 1px, transparent 1.3px);
+  background-size: 11px 11px;
+  background-position: center;
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 50%, black 50%, transparent 100%);
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 50%, black 50%, transparent 100%);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionHeader h2 {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  color: var(--text-primary);
+  margin: 16px 0;
+  background: linear-gradient(135deg, #202020, #232323, #424242);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionHeader p {
+  font-size: 17px;
+  color: var(--text-secondary);
+  max-width: 600px;
+  font-weight: 500;
+}
+
+.bentoGrid {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(250px, auto);
+  gap: 24px;
+}
+
+.bentoCard {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bentoCard:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.bentoLarge {
+  grid-column: span 2;
+  grid-row: span 2;
+  position: relative;
+  overflow: hidden;
+}
+
+.bentoLarge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.582)), url('../app/assets/X.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.bentoLarge::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../app/assets/X.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.bentoLarge>* {
+  position: relative;
+  z-index: 1;
+}
+
+.bentoContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 40px;
+  max-width: 70%;
+}
+
+.bentoWide {
+  grid-column: span 2;
+}
+
+.bentoIcon {
+  width: 48px;
+  height: 48px;
+  background: #f0f0f0;
+  border: 1px solid #dfdfdf;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.bentoCard h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.bentoCard p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bentoLarge,
+  .bentoWide {
+    grid-column: span 1;
+  }
+
+  .bentoContent {
+    max-width: 100%;
+    padding: 32px 24px 24px 24px;
+    box-sizing: border-box;
+  }
+
+  .featuresSection {
+    padding: 0 20px;
+  }
+}

@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { Sparkle, ChevronDown, Menu, X } from 'lucide-react';
 import noderLogo from '../app/assets/noder.png';
+import styles from './Header.module.css';
 
 export default function Header() {
   const router = useRouter();
@@ -36,11 +37,11 @@ export default function Header() {
 
   return (
     <>
-      <div className={`header-wrapper ${isScrolled ? 'scrolled' : ''} ${isHidden ? 'hidden' : ''}`}>
-        <header className="header">
-          <div className="header-left">
+      <div className={`${styles['header-wrapper']} ${isScrolled ? styles.scrolled : ''} ${isHidden ? styles.hidden : ''}`}>
+        <header className={styles.header}>
+          <div className={styles['header-left']}>
             <button
-              className="mobile-menu-toggle"
+              className={styles['mobile-menu-toggle']}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle Menu"
             >
@@ -53,17 +54,17 @@ export default function Header() {
                 </svg>
               )}
             </button>
-            <div className="logo" onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
+            <div className={styles.logo} onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
               <img src={noderLogo.src} alt="Noder" style={{ height: '20px', objectFit: 'contain' }} />
             </div>
           </div>
 
-          <nav className="nav-links">
-            <div className="nav-dropdown">
+          <nav className={styles['nav-links']}>
+            <div className={styles['nav-dropdown']}>
               <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
-                Product <ChevronDown size={14} className="dropdown-icon" />
+                Product <ChevronDown size={14} className={styles['dropdown-icon']} />
               </a>
-              <div className="dropdown-menu">
+              <div className={styles['dropdown-menu']}>
                 <a href="#">
                   <strong>Features</strong>
                   <span>Explore everything Noder has to offer</span>
@@ -85,11 +86,11 @@ export default function Header() {
 
             <a href="#">Pricing</a>
 
-            <div className="nav-dropdown">
+            <div className={styles['nav-dropdown']}>
               <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
-                Resources <ChevronDown size={14} className="dropdown-icon" />
+                Resources <ChevronDown size={14} className={styles['dropdown-icon']} />
               </a>
-              <div className="dropdown-menu">
+              <div className={styles['dropdown-menu']}>
                 <a href="#">
                   <strong>Blog</strong>
                   <span>Read insights and company news</span>
@@ -117,9 +118,9 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu Dropdown */}
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-        <div className="mobile-menu-content">
-          <div className="mobile-nav-section">
+      <div className={`${styles['mobile-menu']} ${isMobileMenuOpen ? styles.open : ''}`}>
+        <div className={styles['mobile-menu-content']}>
+          <div className={styles['mobile-nav-section']}>
             <h3>Product</h3>
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Features</a>
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Integrations</a>
@@ -127,7 +128,7 @@ export default function Header() {
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Changelog</a>
           </div>
 
-          <div className="mobile-nav-section">
+          <div className={styles['mobile-nav-section']}>
             <h3>Resources</h3>
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Blog</a>
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Help Center</a>
@@ -135,8 +136,8 @@ export default function Header() {
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Developers</a>
           </div>
 
-          <div className="mobile-nav-section">
-            <a href="#" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Our Story</a>
+          <div className={styles['mobile-nav-section']}>
+            <a href="#" className={styles['mobile-nav-link']} onClick={() => setIsMobileMenuOpen(false)}>Our Story</a>
           </div>
         </div>
       </div>
