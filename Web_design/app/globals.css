@@ -415,10 +415,11 @@ body::before {
   border: 1px solid var(--border-color);
   padding: 6px 16px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--text-primary);
-  margin-bottom: 32px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   width: fit-content;
 }
 
@@ -531,7 +532,7 @@ body::before {
 }
 
 .trusted-text {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--text-secondary);
   margin-bottom: 32px;
   font-weight: 500;
@@ -565,12 +566,18 @@ body::before {
   display: flex;
   align-items: center;
   gap: 80px;
-  padding-right: 80px; /* Crucial for seamless loop alignment */
+  padding-right: 80px;
+  /* Crucial for seamless loop alignment */
 }
 
 @keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .trusted-logo {
@@ -624,9 +631,10 @@ body::before {
 }
 
 .section-header p {
-  font-size: 18px;
+  font-size: 17px;
   color: var(--text-secondary);
   max-width: 600px;
+  font-weight: 500;
 }
 
 .bento-grid {
@@ -951,15 +959,20 @@ body::before {
     margin: 0;
   }
 
+  .trusted-text {
+    font-size: 10px;
+  }
+
   .badge {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    font-size: 12px;
   }
 
 
 
   /* Scale down title */
   .title {
-    font-size: 50px;
+    font-size: 30px;
     letter-spacing: -1.5px;
   }
 
@@ -1022,6 +1035,11 @@ body::before {
   .footer-links {
     flex-direction: column;
     gap: 40px;
+  }
+
+  main h3, main p,
+  section h3, section p {
+    text-align: left;
   }
 }
 

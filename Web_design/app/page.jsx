@@ -48,7 +48,7 @@ function Home() {
         {/* Right Content Side */}
         <div className="hero-content">
           <div className="badge ">
-            <Sparkles size={16} className="badge-icon" /> Connecting AI Features
+            <Sparkles size={14} className="badge-icon" /> Connecting AI Features
           </div>
 
           <h1 className="title reveal">
