@@ -5,7 +5,7 @@ import { useState, useRef, useEffect } from "react";
 ───────────────────────────────────────── */
 function BackgroundLines({ children }) {
   return (
-    <div style={{ position: "relative", width: "100%", minHeight: "100vh", overflow: "hidden" }}>
+    <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
       {/* Animated SVG line grid */}
       <svg
         aria-hidden="true"
@@ -117,7 +117,7 @@ function AvatarStack({ count = "2,400+" }) {
             style={{
               width: 32,
               height: 32,
-              borderRadius: "50%",
+              borderRadius: "20px",
               background: av.bg,
               border: "2px solid #fafaf9",
               marginLeft: i === 0 ? 0 : -10,
@@ -189,7 +189,7 @@ export default function Waitlist1() {
           height: 44px;
           padding: 0 14px;
           border: 1px solid #e4e4e7;
-          border-radius: 8px;
+          border-radius: 10px;
           font-family: inherit;
           font-size: 14px;
           color: #18181b;
@@ -258,12 +258,12 @@ export default function Waitlist1() {
       <BackgroundLines>
         <div
           style={{
-            minHeight: "100vh",
+            minHeight: "auto",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            padding: "40px 20px",
+            padding: "60px 20px",
             textAlign: "center",
           }}
         >
@@ -299,12 +299,12 @@ export default function Waitlist1() {
             className="wl-fade"
             style={{
               animationDelay: "0.12s",
-              fontSize: "60px",
+              fontSize: "clamp(40px, 5vw, 60px)",
               fontWeight: 600,
               letterSpacing: "-0.03em",
               lineHeight: 1.15,
               color: "#181818ff",
-              maxWidth: 560,
+              maxWidth: 700,
               marginBottom: 18,
             }}
           >
@@ -319,7 +319,7 @@ export default function Waitlist1() {
               fontSize: 16,
               color: "#71717a",
               lineHeight: 1.65,
-              maxWidth: 420,
+              maxWidth: 600,
               marginBottom: 36,
               fontWeight: 400,
             }}

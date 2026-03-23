@@ -24,9 +24,12 @@ export default function Hero() {
         </div>
 
         <h1 className={`${styles.title} reveal`}>
-          Stay focused, stay<br />
-          productive, <span className={styles.titleFaded}>and<br />get more done</span>
+          The art of Inheritance in modern learning
         </h1>
+
+        <p className={`${styles.tagline} reveal`} style={{ animationDelay: '0.1s' }}>
+          Elevate your productivity with next-generation tools designed for seamless integration and accelerated learning workflows.
+        </p>
 
         <div className={styles.ctaRow}>
           <div className={styles.ctaButtons}>
@@ -39,6 +42,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </main>
+    </main >
   );
 }

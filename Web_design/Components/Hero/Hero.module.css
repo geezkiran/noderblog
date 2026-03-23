@@ -39,7 +39,7 @@
 }
 
 .title {
-  font-size: 65px;
+  font-size: clamp(40px, 5vw, 65px);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -3px;
@@ -49,15 +49,12 @@
   -webkit-text-fill-color: transparent;
 }
 
-.titleFaded {
-  font-size: 65px;
+.tagline {
+  font-size: 17px;
   font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -4px;
-  background: linear-gradient(135deg, #969696, #b9b9b9);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #939393;
+  margin-top: 16px;
+  line-height: 1.6;
 }
 
 .ctaRow {
@@ -80,6 +77,8 @@
   .title {
     font-size: 56px;
   }
+
+
 }
 
 @media (max-width: 768px) {
@@ -113,6 +112,13 @@
     font-size: 28px;
     letter-spacing: -1.2px;
   }
+
+  .tagline {
+    font-size: 15px;
+    margin-top: 12px;
+  }
+
+
 
   .ctaButtons {
     flex-direction: row;

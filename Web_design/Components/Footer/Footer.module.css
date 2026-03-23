@@ -124,7 +124,7 @@
 /* ─── Responsive ───────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .footerContent {
-    padding: 48px 40px 36px;
+    padding: 48px 40px 40px;
   }
 
   .footerTop {
@@ -133,8 +133,13 @@
 }
 
 @media (max-width: 640px) {
+  .footer {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
   .footerContent {
-    padding: 40px 24px 32px;
+    padding: 40px 24px 20px;
   }
 
   .footerTop {
@@ -166,6 +171,7 @@
 
   .tagline {
     grid-column: 1 / -1;
+    font-size: 12px;
   }
 
   .badgeRow {
