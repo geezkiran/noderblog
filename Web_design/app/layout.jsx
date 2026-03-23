@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata = {
   title: 'Noder',
-  description: 'Start L',
+  description: 'LightSpeed Learning',
   icons: {
     icon: '/favicon.png',
   },
