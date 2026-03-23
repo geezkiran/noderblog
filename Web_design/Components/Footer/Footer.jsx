@@ -65,7 +65,8 @@ const XIcon = () => (
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.footerTop}>
+      <div className={styles.footerContent}>
+        <div className={styles.footerTop}>
         {Object.entries(footerLinks).map(([category, links]) => (
           <div className={styles.linkGroup} key={category}>
             <h4 className={styles.groupTitle}>{category}</h4>
@@ -102,6 +103,7 @@ export default function Footer() {
             <span key={badge} className={styles.badge}>{badge}</span>
           ))}
         </div>
+      </div>
       </div>
     </footer>
   );

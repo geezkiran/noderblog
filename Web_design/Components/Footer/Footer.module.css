@@ -1,13 +1,17 @@
 .footer {
   width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
   background-color: #ffffff;
   border-top: 1px solid #e5e7eb;
-  padding: 60px 80px 40px;
   margin-top: 50px;
+  font-family: 'Inter', sans-serif;
+}
+
+.footerContent {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 60px 80px 40px;
   box-sizing: border-box;
-  font-family: -apple-system, 'Helvetica Neue', sans-serif;
 }
 
 /* ─── Top nav grid ─────────────────────────────────────────── */
@@ -119,7 +123,7 @@
 
 /* ─── Responsive ───────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .footer {
+  .footerContent {
     padding: 48px 40px 36px;
   }
 
@@ -129,7 +133,7 @@
 }
 
 @media (max-width: 640px) {
-  .footer {
+  .footerContent {
     padding: 40px 24px 32px;
   }
 

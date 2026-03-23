@@ -5,7 +5,10 @@ import Footer from '../Components/Footer/Footer';
 import Hero from '../Components/Hero/Hero';
 import TrustedSection from '../Components/Testimonial/TrustedSection';
 import FeaturesSection from '../Components/FeatureSection/FeaturesSection';
-import FeatureCarousel from '../Components/FeatureCarousel/FeatureCarousel';
+import Waitlist1 from '../Components/Waitlist/Waitlist1';
+
+
+
 
 export default function Home() {
   useEffect(() => {
@@ -28,7 +31,7 @@ export default function Home() {
       <Hero />
       <TrustedSection />
       <FeaturesSection />
-      <FeatureCarousel />
+      <Waitlist1 />
       <Footer />
     </div>
   );
