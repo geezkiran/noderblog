@@ -68,20 +68,20 @@ export default function FeaturesSection() {
       <div className={styles.featuresContainer}>
         <motion.div className="mb-10 text-center flex flex-col items-center" {...fadeUp(0)}>
           <h2 className="mb-5 mt-5 flex items-center justify-center gap-3 text-4xl font-semibold tracking-tighter md:text-4xl">Why choose us</h2>
-          <p className="text-muted-foreground mx-auto max-w-xl text-base">The ultimate platform to accelerate your workflow, offering enterprise security and global scalability.</p>
+          <p className="text-muted-foreground mx-auto pl-2 pr-2 max-w-xl text-base">The ultimate platform to accelerate your workflow, offering enterprise security and global scalability.</p>
         </motion.div>
 
         <div className={styles.carouselWrapper}>
-          <button 
-            className={`${styles.navButton} ${styles.prevButton}`} 
+          <button
+            className={`${styles.navButton} ${styles.prevButton}`}
             onClick={() => scroll('left')}
             aria-label="Previous features"
           >
             <ChevronLeft size={24} />
           </button>
-          
-          <button 
-            className={`${styles.navButton} ${styles.nextButton}`} 
+
+          <button
+            className={`${styles.navButton} ${styles.nextButton}`}
             onClick={() => scroll('right')}
             aria-label="Next features"
           >
@@ -90,7 +90,7 @@ export default function FeaturesSection() {
 
           <div className={styles.carouselTrack} ref={containerRef} style={{ minHeight: '450px' }}>
             {features.map((feature, i) => {
-              const motionProps = isMobile 
+              const motionProps = isMobile
                 ? { initial: { opacity: 1, y: 0 }, animate: { opacity: 1, y: 0 } }
                 : fadeUp(0.1 + (i % 3) * 0.1);
 
