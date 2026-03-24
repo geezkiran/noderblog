@@ -147,11 +147,11 @@ export default function FAQ2() {
       <div
         className="faq-grid"
         style={{
-          maxWidth: "1100px",
+          maxWidth: "1400px",
           width: "100%",
           display: "grid",
-          gridTemplateColumns: "minmax(0, 5fr) minmax(0, 7fr)",
-          gap: "80px",
+          gridTemplateColumns: "minmax(0, 4fr) minmax(0, 7fr)",
+          gap: "150px",
           alignItems: "start",
         }}
       >
@@ -182,17 +182,7 @@ export default function FAQ2() {
           >
             Frequently asked questions
           </h2>
-          <p
-            style={{
-              fontSize: "16px",
-              lineHeight: "1.5",
-              color: "#6b7280",
-              letterSpacing: "-0.01em",
-              margin: "0 0 36px 0",
-            }}
-          >
-            Everything you need to know about the product and how it works.
-          </p>
+
 
         </motion.div>
 

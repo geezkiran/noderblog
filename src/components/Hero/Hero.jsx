@@ -15,7 +15,16 @@ export default function Hero() {
   const router = useRouter();
   return (
     <main className={styles.heroSplit}>
-      <div className={styles.heroImageContainer}>
+      <motion.div 
+        className={styles.heroImageContainer}
+        initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+        animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+        transition={{ 
+          duration: 1.2, 
+          delay: 0.2, 
+          ease: [0.22, 1, 0.36, 1] 
+        }}
+      >
         <img
           src={dashboardImg.src}
           alt="Dashboard Preview"
@@ -23,7 +32,7 @@ export default function Hero() {
           onContextMenu={(e) => e.preventDefault()}
           draggable={false}
         />
-      </div>
+      </motion.div>
 
       <div className={styles.heroContent}>
         <motion.div className="badge" {...fadeUp(0)}>
