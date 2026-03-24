@@ -1,5 +1,6 @@
 import styles from './Footer.module.css';
 import noderLogo from '../../app/assets/noder.png';
+import { motion } from 'framer-motion';
 
 const footerLinks = {
   Product: [
@@ -65,7 +66,13 @@ const XIcon = () => (
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.footerContent}>
+      <motion.div
+        className={styles.footerContent}
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-60px' }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      >
         <div className={styles.footerTop}>
         {Object.entries(footerLinks).map(([category, links]) => (
           <div className={styles.linkGroup} key={category}>
@@ -104,7 +111,7 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      </div>
+      </motion.div>
     </footer>
   );
 }

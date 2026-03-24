@@ -1,18 +1,26 @@
 import React from 'react';
-import { Target, Zap, Shield, Globe } from 'lucide-react';
+import { Zap, Shield, Globe } from 'lucide-react';
+import { motion } from 'framer-motion';
 import styles from './FeaturesSection.module.css';
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-60px' },
+  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], delay },
+});
 
 export default function FeaturesSection() {
   return (
     <section className={styles.featuresSection}>
       <div className={styles.featuresContainer}>
-        <div className={styles.sectionHeader}>
-          <h2>Why Choose Us</h2>
+        <motion.div className={styles.sectionHeader} {...fadeUp(0)}>
+          <h2>Why Choose Noder</h2>
           <p>The ultimate platform to accelerate your workflow, offering enterprise security and global scalability.</p>
-        </div>
+        </motion.div>
 
         <div className={styles.bentoGrid}>
-          <div className={`${styles.bentoCard} ${styles.bentoLarge}`}>
+          <motion.div className={`${styles.bentoCard} ${styles.bentoLarge}`} {...fadeUp(0.1)}>
             <div className={styles.bentoContent}>
               <div className={styles.bentoHeader}>
                 <div className={styles.bentoIcon}><Zap size={24} /></div>
@@ -20,23 +28,23 @@ export default function FeaturesSection() {
               </div>
               <p>Our infrastructure is optimized for speed, ensuring your team never experiences lag or downtime. Work at the speed of thought.</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className={styles.bentoCard}>
+          <motion.div className={styles.bentoCard} {...fadeUp(0.2)}>
             <div className={styles.bentoHeader}>
               <div className={styles.bentoIcon}><Shield size={24} /></div>
               <h3>Enterprise Security</h3>
             </div>
             <p>Bank-grade encryption and advanced security controls to keep your data safe.</p>
-          </div>
+          </motion.div>
 
-          <div className={styles.bentoCard}>
+          <motion.div className={styles.bentoCard} {...fadeUp(0.3)}>
             <div className={styles.bentoHeader}>
               <div className={styles.bentoIcon}><Globe size={24} /></div>
               <h3>Global Sync</h3>
             </div>
             <p>Real-time synchronization across all your devices, anywhere in the world.</p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

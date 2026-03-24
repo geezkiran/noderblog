@@ -1,4 +1,12 @@
 import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-60px' },
+  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], delay },
+});
 
 /* ─────────────────────────────────────────
    BackgroundLines  (Aceternity-style SVG)
@@ -177,13 +185,6 @@ export default function Waitlist1() {
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         body { background: #fafaf9; font-family: 'Inter', system-ui, sans-serif; }
 
-        @keyframes fade-up {
-          from { opacity: 0; transform: translateY(16px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-
-        .wl-fade { opacity: 0; animation: fade-up 0.55s var(--ease, cubic-bezier(.4,0,.2,1)) forwards; }
-
         .wl-input {
           flex: 1;
           height: 44px;
@@ -256,7 +257,7 @@ export default function Waitlist1() {
       `}</style>
 
       <BackgroundLines>
-        <div
+        <motion.div
           style={{
             minHeight: "auto",
             display: "flex",
@@ -266,12 +267,11 @@ export default function Waitlist1() {
             padding: "60px 20px",
             textAlign: "center",
           }}
+          {...fadeUp(0)}
         >
           {/* Badge */}
           <div
-            className="wl-fade"
             style={{
-              animationDelay: "0.05s",
               display: "inline-flex",
               alignItems: "center",
               gap: 6,
@@ -296,9 +296,7 @@ export default function Waitlist1() {
 
           {/* Heading */}
           <h1
-            className="wl-fade"
             style={{
-              animationDelay: "0.12s",
               fontSize: "clamp(40px, 5vw, 60px)",
               fontWeight: 600,
               letterSpacing: "-0.03em",
@@ -313,12 +311,9 @@ export default function Waitlist1() {
 
           {/* Description */}
           <p
-            className="wl-fade"
             style={{
-              animationDelay: "0.2s",
               fontSize: 16,
               color: "#71717a",
-              lineHeight: 1.65,
               maxWidth: 600,
               marginBottom: 36,
               letterSpacing: "-0.01em",
@@ -332,8 +327,7 @@ export default function Waitlist1() {
 
           {/* Form */}
           <div
-            className="wl-fade"
-            style={{ animationDelay: "0.28s", width: "100%", maxWidth: 440, marginBottom: 28 }}
+            style={{ width: "100%", maxWidth: 440, marginBottom: 28 }}
           >
             {status === "success" ? (
               <div
@@ -394,11 +388,12 @@ export default function Waitlist1() {
           </div>
 
           {/* Avatar row */}
-          <div className="wl-fade" style={{ animationDelay: "0.36s" }}>
+          <div>
             <AvatarStack count="2,400+" />
           </div>
-        </div>
+        </motion.div>
       </BackgroundLines>
     </>
   );
 }
+

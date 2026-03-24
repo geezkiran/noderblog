@@ -1,8 +1,15 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { Sparkles, Sparkle, CirclePlus } from 'lucide-react';
+import { motion } from 'framer-motion';
 import dashboardImg from '../../app/assets/cardwebp.webp';
 import styles from './Hero.module.css';
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], delay },
+});
 
 export default function Hero() {
   const router = useRouter();
@@ -19,28 +26,28 @@ export default function Hero() {
       </div>
 
       <div className={styles.heroContent}>
-        <div className="badge">
+        <motion.div className="badge" {...fadeUp(0)}>
           <Sparkles size={14} className="badge-icon" /> Connecting AI Features
-        </div>
+        </motion.div>
 
-        <h1 className={styles.title + " reveal"}>
+        <motion.h1 className={styles.title} {...fadeUp(0.12)}>
           The art of Inheritance in modern learning
-        </h1>
+        </motion.h1>
 
-        <p className={`${styles.tagline} reveal`} style={{ animationDelay: '0.5s' }}>
+        <motion.p className={styles.tagline} {...fadeUp(0.24)}>
           Elevate your productivity with next-generation tools designed for seamless integration and accelerated learning workflows.
-        </p>
+        </motion.p>
 
-        <div className={styles.ctaRow}>
+        <motion.div className={styles.ctaRow} {...fadeUp(0.36)}>
           <div className={styles.ctaButtons}>
             <button className="btn btn-white" onClick={() => router.push('/signup')}>
-              <Sparkle size={17} /> Get Started
+              <Sparkle size={17} />Watch Demo
             </button>
             <button className="btn btn-primary" onClick={() => router.push('/#')}>
               <CirclePlus size={17} />
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </main >
   );

@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 import {
   Tooltip,
   TooltipContent,
@@ -148,11 +150,17 @@ function SupportIcon({
 }
 
 export default function Compare8() {
+  const fadeUp = (delay = 0) => ({
+    initial: { opacity: 0, y: 24 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: '-60px' },
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], delay },
+  });
   return (
     <section className="py-16">
       <div className="container mx-auto max-w-5xl px-4 md:px-8">
         {/* Header */}
-        <div className="mb-10 text-center">
+        <motion.div className="mb-10 text-center" {...fadeUp(0)}>
           <h2 className="mb-5 flex items-center justify-center gap-3 text-4xl font-semibold tracking-tighter md:text-4xl">
             What we do better.
           </h2>
@@ -160,17 +168,17 @@ export default function Compare8() {
             A detailed feature comparison to help you choose the right UI
             framework for your next project.
           </p>
-        </div>
+        </motion.div>
 
         {/* Table */}
-        <div className="rounded-xl">
+        <motion.div className="rounded-xl" {...fadeUp(0.15)}>
           <div className="grid grid-cols-[1fr_45px_45px] items-center gap-4 border-b bg-muted/40 px-6 py-4 md:grid-cols-[1fr_120px_120px]">
             <div />
             <div className="flex flex-col items-center justify-center gap-1">
-              <span className="text-[16px] text-gray-500 font-medium md:text-sm">us</span>
+              <span className="text-[18px] text-gray-500 font-medium md:text-sm">us</span>
             </div>
             <div className="flex flex-col items-center justify-center gap-1">
-              <span className="text-[16px] text-gray-500 font-medium md:text-sm">others</span>
+              <span className="text-[18px] text-gray-500 font-medium md:text-sm">others</span>
             </div>
           </div>
 
@@ -228,7 +236,7 @@ export default function Compare8() {
 
           {/* Legend */}
 
-        </div>
+        </motion.div>
       </div>
     </section>
   );

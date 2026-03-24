@@ -114,7 +114,7 @@ export default function Header() {
             <a href="#">Story</a>
           </nav>
 
-          <button className="btn btn-primary" onClick={() => router.push('/signup')}> <Sparkle size={16} /> Get Started</button>
+          <button className="btn btn-primary" onClick={() => router.push('/signup')}>Early Access</button>
         </header>
         <Banner1 />
       </div>

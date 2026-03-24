@@ -1,4 +1,12 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-60px' },
+  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], delay },
+});
 
 const faqs = [
   {
@@ -148,7 +156,7 @@ export default function FAQ2() {
         }}
       >
         {/* Left column */}
-        <div className="faq-sticky-col" style={{ position: "sticky", top: "80px" }}>
+        <motion.div className="faq-sticky-col" style={{ position: "sticky", top: "80px" }} {...fadeUp(0)}>
           <p
             style={{
               fontSize: "12px",
@@ -186,13 +194,12 @@ export default function FAQ2() {
             Everything you need to know about the product and how it works.
           </p>
 
-        </div>
+        </motion.div>
 
         {/* Right column — accordion */}
-        <div
-          style={{
-            borderTop: "1px solid #e5e7eb",
-          }}
+        <motion.div
+          style={{ borderTop: "1px solid #e5e7eb" }}
+          {...fadeUp(0.15)}
         >
           {faqs.map((faq, i) => (
             <AccordionItem
@@ -203,7 +210,7 @@ export default function FAQ2() {
               onClick={() => toggle(i)}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Responsive styles */}

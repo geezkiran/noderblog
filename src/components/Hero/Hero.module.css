@@ -42,6 +42,7 @@
   font-weight: 600;
   line-height: 1.05;
   max-width: 650px;
+  margin-top: 10px;
   padding-bottom: 10px;
   letter-spacing: -3px;
   background: linear-gradient(135deg, #202020, #424242);
