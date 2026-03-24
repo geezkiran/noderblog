@@ -6,7 +6,7 @@ import styles from './FeaturesSection.module.css';
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-60px' },
+  viewport: { once: true, margin: '0px' },
   transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], delay },
 });
 
@@ -47,6 +47,14 @@ export default function FeaturesSection() {
   const containerRef = useRef(null);
   const { scrollXProgress } = useScroll({ container: containerRef });
   const scaleX = useSpring(scrollXProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile(); // Check on mount
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const scroll = (direction) => {
     if (containerRef.current) {
@@ -80,20 +88,26 @@ export default function FeaturesSection() {
             <ChevronRight size={24} />
           </button>
 
-          <div className={styles.carouselTrack} ref={containerRef}>
-            {features.map((feature, i) => (
-              <motion.div
-                key={i}
-                className={styles.carouselCard}
-                {...fadeUp(0.1 + (i % 3) * 0.1)}
-              >
-                <div className={styles.cardContent}>
-                  <div className={styles.iconBox}>{feature.icon}</div>
-                  <h3>{feature.title}</h3>
-                  <p>{feature.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+          <div className={styles.carouselTrack} ref={containerRef} style={{ minHeight: '450px' }}>
+            {features.map((feature, i) => {
+              const motionProps = isMobile 
+                ? { initial: { opacity: 1, y: 0 }, animate: { opacity: 1, y: 0 } }
+                : fadeUp(0.1 + (i % 3) * 0.1);
+
+              return (
+                <motion.div
+                  key={i}
+                  className={styles.carouselCard}
+                  {...motionProps}
+                >
+                  <div className={styles.cardContent}>
+                    <div className={styles.iconBox}>{feature.icon}</div>
+                    <h3>{feature.title}</h3>
+                    <p>{feature.desc}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
 
           <div className={styles.indicatorTrack}>
