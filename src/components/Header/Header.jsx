@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { Sparkle, ChevronDown, Menu, X } from 'lucide-react';
 import noderLogo from '../../app/assets/noder.png';
 import styles from './Header.module.css';
+import Banner1 from '../Banner/Banner1';
 
 export default function Header() {
   const router = useRouter();
@@ -115,6 +116,7 @@ export default function Header() {
 
           <button className="btn btn-primary" onClick={() => router.push('/signup')}> <Sparkle size={16} /> Get Started</button>
         </header>
+        <Banner1 />
       </div>
 
       {/* Mobile Menu Dropdown */}

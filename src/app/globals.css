@@ -3,6 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   --bg-color: #ffffffcb;
   --bg-secondary: #f9f9f9;
@@ -129,8 +130,8 @@ body::before {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
+  background: #ffffffcb;
+  border: 1px solid #e1e1e1;
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 12px;
@@ -276,6 +277,7 @@ body::before {
     --font-heading: var(--font-sans);
     --font-sans: var(--font-sans);
   }
+
   :root {
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
@@ -310,6 +312,7 @@ body::before {
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
   }
+
   .dark {
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);
@@ -343,12 +346,15 @@ body::before {
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
   }
+
   * {
     @apply border-border outline-ring;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }
