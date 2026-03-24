@@ -239,8 +239,10 @@
     justify-content: center;
   }
 
-  .header> :global(.btn-primary) {
-    display: none;
+  .header :global(.btn-primary) {
+    display: flex;
+    padding: 6px 14px !important;
+    font-size: 13px !important;
   }
 
   .nav-links {
