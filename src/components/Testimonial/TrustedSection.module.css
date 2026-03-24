@@ -2,8 +2,8 @@
   width: 100%;
   max-width: 1400px;
   overflow-x: hidden;
-  margin: -80px auto 60px;
-  padding: 0 10px;
+  margin: 0 auto;
+  padding: 80px 20px;
   text-align: center;
 }
 
@@ -48,8 +48,13 @@
 }
 
 @keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .trustedLogo {
@@ -64,10 +69,12 @@
   .trustedText {
     font-size: 10px;
   }
+
   .trustedSection {
-    margin-top: -150px;
-    padding: 0 20px;
+    margin-top: 0;
+    padding: 50px 20px;
   }
+
   .trustedLogosGroup {
     gap: 32px;
     padding-right: 32px;

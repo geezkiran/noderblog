@@ -30,12 +30,13 @@ export default function Home() {
   return (
     <div className="noder-app">
       <Header />
-      <Hero />
-      <TrustedSection />
-      <FeaturesSection />
-      <Compare8 />
-      <FAQ2 />
-      <Waitlist1 />
+      <div className="flex w-full flex-col divide-y divide-border/40">
+        <Hero />
+        <FeaturesSection />
+        <Compare8 />
+        <FAQ2 />
+        <Waitlist1 />
+      </div>
       <Footer />
     </div>
   );
