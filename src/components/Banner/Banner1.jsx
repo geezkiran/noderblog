@@ -26,7 +26,7 @@ const Banner1 = ({
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className={cn("hidden md:block w-full border-b bg-background px-5 py-1.5", className)}
+      className={cn("hidden md:block w-full border-b bg-grey-50 px-5 py-1.5", className)}
     >
       <div className="flex items-center justify-between gap-2">
         <div className="flex-1 text-center">

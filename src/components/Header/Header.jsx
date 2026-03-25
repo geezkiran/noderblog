@@ -3,7 +3,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { Sparkle, ChevronDown, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-import noderLogo from '../../app/assets/noder.png';
+import noderLogo from '../../app/assets/logoicon.png';
+import logomob from '../../app/assets/logoiconmob.png';
+
 import styles from './Header.module.css';
 import Banner1 from '../Banner/Banner1';
 
@@ -57,7 +59,8 @@ export default function Header() {
               )}
             </button>
             <div className={styles.logo} onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
-              <img src={noderLogo.src} alt="Noder" style={{ height: '20px', objectFit: 'contain' }} />
+              <img src={noderLogo.src} alt="Noder" className={styles['logo-full']} style={{ height: '24px', objectFit: 'contain' }} />
+              <img src={logomob.src} alt="Noder" className={styles['logo-mob']} style={{ height: '24px', objectFit: 'contain' }} />
             </div>
           </div>
 
@@ -123,7 +126,7 @@ export default function Header() {
       {/* Mobile Menu Dropdown */}
       <div className={`${styles['mobile-menu']} ${isMobileMenuOpen ? styles.open : ''}`}>
         <div className={styles['mobile-menu-content']}>
-          <motion.div 
+          <motion.div
             className={styles['mobile-nav-section']}
             initial={{ opacity: 0, y: 15 }}
             animate={isMobileMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
@@ -136,7 +139,7 @@ export default function Header() {
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Changelog</a>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className={styles['mobile-nav-section']}
             initial={{ opacity: 0, y: 15 }}
             animate={isMobileMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
@@ -149,7 +152,7 @@ export default function Header() {
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Developers</a>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className={styles['mobile-nav-section']}
             initial={{ opacity: 0, y: 15 }}
             animate={isMobileMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
