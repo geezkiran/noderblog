@@ -49,7 +49,7 @@ export default function Header() {
 
           <nav className={styles['nav-links']}>
             <div className={styles['nav-dropdown']}>
-              <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
+              <a href="#" className={styles['nav-link-caps']} style={{ display: 'flex', alignItems: 'center' }}>
                 Product <ChevronDown size={14} className={styles['dropdown-icon']} />
               </a>
               <div className={styles['dropdown-menu']}>
@@ -69,10 +69,10 @@ export default function Header() {
               </div>
             </div>
 
-            <a href="#">Pricing</a>
+            <a href="#" className={styles['nav-link-caps']}>Pricing</a>
 
             <div className={styles['nav-dropdown']}>
-              <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
+              <a href="#" className={styles['nav-link-caps']} style={{ display: 'flex', alignItems: 'center' }}>
                 Resources <ChevronDown size={14} className={styles['dropdown-icon']} />
               </a>
               <div className={styles['dropdown-menu']}>
@@ -92,7 +92,7 @@ export default function Header() {
               </div>
             </div>
 
-            <a href="#">Story</a>
+            <a href="#" className={styles['nav-link-caps']}>Story</a>
           </nav>
 
           <button
@@ -130,7 +130,7 @@ export default function Header() {
             animate={isMobileMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
             transition={{ delay: 0.1 }}
           >
-            <h3>Product</h3>
+            <h3 className={styles['nav-link-caps']} style={{ color: 'var(--text-secondary)', marginBottom: '12px' }}>Product</h3>
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Features</a>
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Pricing</a>
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Plugins</a>
@@ -143,7 +143,7 @@ export default function Header() {
             animate={isMobileMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
             transition={{ delay: 0.2 }}
           >
-            <h3>Resources</h3>
+            <h3 className={styles['nav-link-caps']} style={{ color: 'var(--text-secondary)', marginBottom: '12px' }}>Resources</h3>
             <a href="/blog" onClick={() => setIsMobileMenuOpen(false)}>Blog</a>
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Benchmarks</a>
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Documentation</a>
@@ -155,7 +155,7 @@ export default function Header() {
             animate={isMobileMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
             transition={{ delay: 0.3 }}
           >
-            <a href="#" className={styles['mobile-nav-link']} onClick={() => setIsMobileMenuOpen(false)}>Our Story</a>
+            <a href="#" className={`${styles['mobile-nav-link']} ${styles['nav-link-serif']}`} onClick={() => setIsMobileMenuOpen(false)}>Our Story</a>
           </motion.div>
         </div>
       </div>

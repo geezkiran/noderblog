@@ -63,7 +63,7 @@ body {
   color: var(--text-primary);
   max-width: 100%;
   margin: 0 auto;
-  font-family: var(--font-geist-sans), Inter, sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
   overflow-x: hidden;
   position: relative;
 }
@@ -81,8 +81,11 @@ body {
 .btn {
   padding: 8px 25px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 13px;
+  font-family: var(--font-geist-sans), sans-serif;
   font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   cursor: pointer;
   transition: all 0.2s;
   border: none;
@@ -144,7 +147,9 @@ body {
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 12px;
+  font-family: var(--font-geist-sans), sans-serif;
   font-weight: 400;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
   margin-bottom: 20px;
   width: fit-content;
@@ -254,6 +259,8 @@ body {
   height: 32px;
   border-radius: 999px;
   cursor: pointer;
+  font-family: var(--font-geist-sans), sans-serif;
+  letter-spacing: -0.01em;
   transition: all 0.2s ease;
   line-height: 1;
 }

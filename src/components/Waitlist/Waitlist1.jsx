@@ -87,7 +87,7 @@ export default function Waitlist1() {
     <>
       <style>{`
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: var(--bg-color); color: var(--text-primary); font-family: 'Inter', system-ui, sans-serif; }
+        body { background: var(--bg-color); color: var(--text-primary); font-family: var(--font-geist-sans), system-ui, sans-serif; }
 
         .wl-input {
           flex: 1;
@@ -118,9 +118,11 @@ export default function Waitlist1() {
           border-radius: 8px;
           background: var(--text-primary);
           color: var(--bg-color);
-          font-family: inherit;
-          font-size: 14px;
+          font-family: var(--font-geist-sans), sans-serif;
+          font-size: 13px;
           font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
           border: none;
           cursor: pointer;
           white-space: nowrap;

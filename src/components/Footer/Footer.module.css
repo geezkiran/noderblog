@@ -3,7 +3,7 @@
   background-color: var(--bg-color);
   border-top: 1px solid var(--border-color);
   margin-top: 50px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
 }
 
 .footerContent {

@@ -30,7 +30,7 @@ const Banner1 = ({
     >
       <div className="flex items-center justify-between gap-2">
         <div className="flex-1 text-center">
-          <span className="text-xs md:text-sm">
+          <span className="text-xs md:text-sm" style={{ fontFamily: 'var(--font-geist-sans)', letterSpacing: '-0.01em' }}>
             <span className="font-regular tracking-tight">{title}</span>{" "}
             <span className="text-muted-foreground">
               {description}{" "}
@@ -39,6 +39,7 @@ const Banner1 = ({
                 className="underline underline-offset-2 text-blue-color hover:text-foreground font-light transition-colors"
                 target="_blank"
                 rel="noreferrer"
+                style={{ letterSpacing: '-0.01em' }}
               >
                 {linkText}
               </a>

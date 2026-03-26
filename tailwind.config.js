@@ -42,7 +42,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "Inter", "sans-serif"],
+        sans: ["var(--font-geist-sans)", "sans-serif"],
         serif: ["var(--font-instrument-serif)", "serif"],
       },
       borderRadius: {

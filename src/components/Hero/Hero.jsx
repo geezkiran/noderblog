@@ -30,13 +30,13 @@ export default function Hero() {
         <motion.h1
           className={styles.title}
           style={{
-            fontFamily: 'var(--font-instrument-serif)',
-            fontSize: 'clamp(3rem, 10vw, 3.75rem)',
+            fontFamily: 'var(--font-instrument-sans)',
+            fontSize: 'clamp(3rem, 10vw, 4.5rem)',
             fontWeight: 500
           }}
           {...fadeUp(0.12)}
         >
-          Light. Speed. Learning.
+          Light Speed Learning
         </motion.h1>
 
         <motion.p className={styles.tagline} {...fadeUp(0.24)}>

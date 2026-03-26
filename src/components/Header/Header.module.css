@@ -76,7 +76,8 @@
 
 .nav-links {
   display: flex;
-  padding-top: 2px;
+  align-items: center;
+  padding-top: 0;
   gap: 40px;
 }
 
@@ -84,9 +85,19 @@
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 16px;
-  font-weight: 400;
+  font-family: var(--font-geist-sans), sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
   transition: color 0.2s;
 }
+
+.nav-link-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.04em !important;
+  font-size: 13px !important;
+}
+
+
 
 .nav-links a:hover {
   color: var(--text-primary);
@@ -294,6 +305,8 @@
   cursor: pointer;
   border: none;
   text-decoration: none;
+  font-family: var(--font-geist-sans), sans-serif;
+  letter-spacing: -0.02em;
   transition: all 0.3s ease;
 }
 
@@ -301,9 +314,12 @@
   gap: 0;
   /* Gap is handled by motion.span margins */
   background: var(--btn-fill);
-  padding: 8px 13px;
+  padding: 8px 18px;
   border-radius: 99px;
   font-size: 13px;
+  font-family: var(--font-geist-sans), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   color: var(--text-primary);
   border: 1px solid var(--btn-border);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);

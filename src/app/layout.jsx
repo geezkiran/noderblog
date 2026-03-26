@@ -1,7 +1,6 @@
 import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
-import { Geist } from "next/font/google";
-import { Instrument_Serif } from "next/font/google";
+import { Geist, Instrument_Serif, Instrument_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 const geistSans = Geist({ 
@@ -13,6 +12,11 @@ const instrumentSerif = Instrument_Serif({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-instrument-serif',
+});
+
+const instrumentSans = Instrument_Sans({
+  subsets: ['latin'],
+  variable: '--font-instrument-sans',
 });
 
 export const metadata = {
@@ -30,7 +34,8 @@ export default function RootLayout({ children }) {
       className={cn(
         "font-sans", 
         geistSans.variable, 
-        instrumentSerif.variable
+        instrumentSerif.variable,
+        instrumentSans.variable
       )} 
       suppressHydrationWarning
     >

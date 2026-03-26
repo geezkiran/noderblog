@@ -163,7 +163,7 @@ export default function FAQ2() {
               fontSize: "12px",
               fontFamily: "var(--font-geist-sans)",
               fontWeight: "500",
-              letterSpacing: "0.08em",
+              letterSpacing: "-0.02em",
               textTransform: "uppercase",
               color: "var(--text-secondary)",
               marginBottom: "16px",
