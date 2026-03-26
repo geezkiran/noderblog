@@ -150,7 +150,7 @@ export default function Header() {
             transition={{ delay: 0.2 }}
           >
             <h3>Resources</h3>
-            <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Blog</a>
+            <a href="/blog" onClick={() => setIsMobileMenuOpen(false)}>Blog</a>
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Help Center</a>
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Community</a>
             <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Developers</a>

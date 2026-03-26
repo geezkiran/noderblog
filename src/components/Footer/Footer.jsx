@@ -16,7 +16,7 @@ const footerLinks = {
     { label: 'Status', href: '#' },
   ],
   Resources: [
-    { label: 'Blog', href: '#' },
+    { label: 'Blog', href: '/blog' },
     { label: 'About us', href: '#' },
     { label: 'Careers', href: '#' },
 

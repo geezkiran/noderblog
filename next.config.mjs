@@ -19,7 +19,7 @@ const nextConfig = {
           {
             type: 'host',
             // Replace with your actual domain when deploying
-            value: 'blog.noder.grid', 
+            value: 'blog.noderhq.com',
           },
         ],
         destination: '/blog/:path*',
