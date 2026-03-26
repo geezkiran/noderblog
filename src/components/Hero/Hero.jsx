@@ -36,15 +36,15 @@ export default function Hero() {
 
       <div className={styles.heroContent}>
         <motion.div className="badge" {...fadeUp(0)}>
-          <Sparkles size={14} className="badge-icon" /> Connecting AI Features
+          <Sparkles size={14} className="badge-icon" /> Spacial index
         </motion.div>
 
         <motion.h1 className={styles.title} {...fadeUp(0.12)}>
-          The art of Inheritance in modern learning
+          Light. Speed. Learning.
         </motion.h1>
 
         <motion.p className={styles.tagline} {...fadeUp(0.24)}>
-          Elevate your productivity with next-generation tools designed for seamless integration and accelerated learning workflows.
+          No more wasting hours on endless scrolling. Everything you want to learn, the way you want to learn.
         </motion.p>
 
         <motion.div className={styles.ctaRow} {...fadeUp(0.36)}>

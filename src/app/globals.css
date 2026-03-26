@@ -108,7 +108,7 @@ body {
   align-items: center;
   gap: 10px;
   background: var(--btn-fill);
-  padding: 8px 13px;
+  padding: 2px 13px;
   border-radius: 20px;
   font-size: 13px;
   font-weight: 400;
@@ -124,7 +124,7 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1.5px;
+  padding: 1px;
   pointer-events: none;
 }
 
