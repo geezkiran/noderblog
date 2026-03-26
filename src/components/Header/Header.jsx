@@ -42,7 +42,7 @@ export default function Header() {
               )}
             </button>
             <div className={styles.logo} onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
-              <img src={noderLogo.src} alt="Noder" className={styles['logo-full']} style={{ height: '24px', objectFit: 'contain' }} />
+              <img src={noderLogo.src} alt="Noder" className={styles['logo-full']} style={{ height: '22px', objectFit: 'contain' }} />
               <img src={logomob.src} alt="Noder" className={styles['logo-mob']} style={{ height: '24px', objectFit: 'contain' }} />
             </div>
           </div>
@@ -101,21 +101,21 @@ export default function Header() {
             <a href="#">Story</a>
           </nav>
 
-          <button 
-            className={`${styles.btn} ${styles['btn-primary']} ${isScrolled ? styles['btn-scrolled'] : ''}`} 
+          <button
+            className={`${styles.btn} ${styles['btn-primary']} ${isScrolled ? styles['btn-scrolled'] : ''}`}
             onClick={() => router.push('/signup')}
-          > 
-            <Telescope size={18} strokeWidth={2} color="var(--text-primary)" /> 
+          >
+            <Telescope size={18} strokeWidth={2} color="var(--text-primary)" />
             <motion.span
               initial={false}
-              animate={{ 
+              animate={{
                 width: isScrolled ? 0 : 'auto',
                 opacity: isScrolled ? 0 : 1,
                 marginLeft: isScrolled ? 0 : 8
               }}
               transition={{ duration: 0.3, ease: 'easeInOut' }}
-              style={{ 
-                overflow: 'hidden', 
+              style={{
+                overflow: 'hidden',
                 whiteSpace: 'nowrap',
                 display: 'inline-block'
               }}

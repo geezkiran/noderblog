@@ -6,7 +6,6 @@
 
 .featuresContainer {
   position: relative;
-  max-width: 1400px;
   margin: 0 auto;
   width: 100%;
 }
@@ -16,8 +15,8 @@
 .carouselWrapper {
   position: relative;
   width: 100%;
-  max-width: 1400px;
-  margin: 40px auto 0;
+
+  margin: 0px auto 0;
   display: block;
 }
 
@@ -26,27 +25,8 @@
   overflow: hidden;
 }
 
-/* Feathered fade at the clipping edges (desktop) */
-.carouselViewport::before,
-.carouselViewport::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 56px;
-  pointer-events: none;
-  z-index: 5;
-}
 
-.carouselViewport::before {
-  left: 0;
-  background: linear-gradient(to right, rgb(var(--rgb-bg) / 0.92), rgb(var(--rgb-bg) / 0));
-}
 
-.carouselViewport::after {
-  right: 0;
-  background: linear-gradient(to left, rgb(var(--rgb-bg) / 0.92), rgb(var(--rgb-bg) / 0));
-}
 
 
 
@@ -98,7 +78,7 @@
   gap: 24px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 24px 96px 48px;
+  padding: 24px 0px 48px;
   scroll-padding-left: 96px;
   scroll-padding-right: 96px;
   scrollbar-width: none;
@@ -121,8 +101,8 @@
 }
 
 .carouselCard {
-  flex: 0 0 320px;
-  aspect-ratio: 3 / 4;
+  flex: 0 0 720px;
+  aspect-ratio: 3 / 2;
   scroll-snap-align: center;
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
@@ -150,7 +130,7 @@
 
 .carouselCard:hover .cardBackground {
   transform: scale(1.1);
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .cardOverlay {
@@ -159,13 +139,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+
   z-index: 1;
 }
 
 .carouselCard:hover {
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.55);
-  transform: translateY(-8px);
+  transform: translateY(-3px);
 }
 
 
@@ -226,7 +205,7 @@
 
 @media (max-width: 768px) {
   .carouselCard {
-    flex: 0 0 285px;
+    flex: 0 0 300px;
   }
 
   .carouselTrack {
@@ -240,10 +219,10 @@
   }
 
   .featuresSection {
-    padding: 40px 0;
+    padding: 30px 0;
   }
 
   .featuresContainer {
-    padding: 0 10px;
+    padding: 0 0px;
   }
 }

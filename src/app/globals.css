@@ -95,7 +95,7 @@ body {
 .btn-white {
   background: var(--btn-fill);
   color: var(--text-primary);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--btn-border);
   padding: 8px 18px;
 }
 
@@ -132,15 +132,7 @@ body {
   background: var(--bg-secondary);
 }
 
-.btn-secondary {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  color: var(--text-secondary);
-}
 
-.btn-secondary:hover {
-  background: rgb(231, 231, 231);
-}
 
 /* ── Shared badge ───────────────────────────────────────────── */
 .badge {
