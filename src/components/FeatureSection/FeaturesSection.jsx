@@ -113,7 +113,7 @@ export default function FeaturesSection() {
       <div className={styles.featuresContainer}>
         <motion.div className="mb-10 text-center flex flex-col items-center" {...fadeUp(0)}>
           <h2 className="mb-5 mt-5 flex items-center justify-center gap-3 text-4xl font-medium tracking-tighter md:text-4xl">Why choose us</h2>
-          <p className="text-muted-foreground mx-auto pl-2 pr-2 max-w-xl text-base max-w-md">The ultimate platform to accelerate your workflow, offering enterprise security and global scalability.</p>
+          <p className="text-muted-foreground mx-auto pl-2 pr-2 text-base max-w-[300px]">The ultimate platform to accelerate your workflow, offering enterprise security and global scalability.</p>
         </motion.div>
 
         <div className={styles.carouselWrapper}>
