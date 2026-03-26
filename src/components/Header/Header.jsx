@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <>
-      <div className={styles['header-wrapper']}>
+      <div className={`${styles['header-wrapper']} ${isScrolled ? styles.scrolled : ''}`}>
         <header className={styles.header}>
           <div className={styles['header-left']}>
             <button
