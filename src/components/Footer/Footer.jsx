@@ -102,7 +102,7 @@ export default function Footer() {
               <a href="#" className={styles.socialIcon} aria-label="GitHub"><GitHubIcon /></a>
               <a href="#" className={styles.socialIcon} aria-label="X"><XIcon /></a>
             </div>
-            <p className={styles.tagline}>Noder is an official trademark of NOIRGRID Inc.</p>
+            <p className={styles.tagline}>Noder is an official trademark of Noirgrid Inc.</p>
           </div>
 
           <div className={styles.rightBlock}>
