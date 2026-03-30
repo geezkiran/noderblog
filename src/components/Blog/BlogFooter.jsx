@@ -5,8 +5,8 @@ import { ArrowUpRight } from 'lucide-react';
 import styles from './BlogFooter.module.css';
 
 const blogFooterLinks = [
-  { label: 'All Articles', href: '/' },
-  { label: 'Get Early Access', href: '/#waitlist' },
+  { label: 'All Articles', href: 'https://blog.noderhq.com/' },
+  { label: 'Get Early Access', href: 'https://signup.noderhq.com/' },
 ];
 
 export default function BlogFooter() {

@@ -12,7 +12,7 @@
   --success: #22c55e;
   --danger: #ef4444;
   --border-color: rgb(11 10 11 / 0.12);
-  --dot-color: rgba(0, 0, 0, 0.10);
+  --dot-color: rgba(0, 0, 0, 0.18);
   --text-weight: 500;
   --overlay-color: #e5e5e5f7;
 
@@ -38,7 +38,7 @@ html.dark {
   --text-primary: #f5f5f7;
   --text-secondary: #aeaeae;
   --border-color: rgb(245 245 247 / 0.10);
-  --dot-color: rgba(255, 255, 255, 0.08);
+  --dot-color: rgba(255, 255, 255, 0.20);
   --text-weight: 500;
   --overlay-color: #090909ea;
 

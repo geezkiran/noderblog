@@ -1,10 +1,10 @@
 .blogHeader {
   position: relative;
-  padding: 80px 20px 80px;
+  padding: 30px 20px 20px;
   background: var(--bg-color);
   overflow: hidden;
   text-align: center;
-  min-height: 400px;
+  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -527,7 +527,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: var(--bg-color);
+  background-color: transparent;
   transition: all 0.3s ease;
 }
 
