@@ -78,10 +78,10 @@ export const blogPosts = [
         type: "list",
         variant: "ordered",
         items: [
-          "1. What are the major areas of this domain?",
-          "2. What are the dependencies between them? (What must I know to understand X?)",
-          "3. What does done look like for each area?",
-          "4. What's the 20% that gives 80% of the value?",
+          " What are the major areas of this domain?",
+          " What are the dependencies between them? (What must I know to understand X?)",
+          " What does done look like for each area?",
+          " What's the 20% that gives 80% of the value?",
         ],
       },
       {
