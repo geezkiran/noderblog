@@ -28,7 +28,7 @@ export default function BlogCard({ post, index }) {
               <User size={14} /> {post.author}
             </span>
             <span className={styles.metaItem}>
-              <Clock3 size={14} /> 2min
+              <Clock3 size={14} /> {post.readTime}
             </span>
           </div>
 

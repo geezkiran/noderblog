@@ -18,8 +18,8 @@ export default function BlogHeader() {
           <Link href="/">
             <img src={logo.src} alt="Noder Logo" className={styles.title} width={150} />
           </Link>
-          <p className={styles.description} style={{ maxWidth: '550px' }}>
-            Insights, updates, and deep dives into the future of AI-driven productivity and infrastructure.
+          <p className={styles.description} style={{ maxWidth: '450px' }}>
+            Insights, updates, and deep dives into the future of organized learning.
           </p>
         </motion.div>
       </div>

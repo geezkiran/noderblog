@@ -7,22 +7,76 @@ import BlogFooter from '../../components/Blog/BlogFooter';
 import { blogPosts } from '../../data/blogData';
 import styles from '../../components/Blog/Blog.module.css';
 
+function renderInlineText(text) {
+  const segments = text.split(/(\/\/.*?\/\/)/g);
+
+  return segments.map((segment, index) => {
+    if (segment.startsWith('//') && segment.endsWith('//')) {
+      return (
+        <span key={`${segment}-${index}`} className={styles.inlineHighlight}>
+          {segment.slice(2, -2)}
+        </span>
+      );
+    }
+
+    return segment;
+  });
+}
+
 function renderContentBlock(block, index) {
   if (block.type === 'heading') {
-    return <h2 key={index}>{block.text}</h2>;
+    const featuredHeadings = [
+      'Why the Index Works: The Cognitive Science',
+      'Why the Index Works | The Cognitive Science',
+      'How to build a Learning Index',
+      'Common Mistakes',
+    ];
+    const headingClassName = featuredHeadings.includes(block.text)
+      ? styles.featuredHeading
+      : undefined;
+
+    return (
+      <h2 key={index} className={headingClassName}>
+        {renderInlineText(block.text)}
+      </h2>
+    );
   }
 
   if (block.type === 'quote') {
-    return <blockquote key={index}>{block.text}</blockquote>;
+    return <blockquote key={index}>{renderInlineText(block.text)}</blockquote>;
   }
 
-  return <p key={index}>{block.text}</p>;
+  if (block.type === 'list') {
+    const ListTag = block.variant === 'ordered' ? 'ol' : 'ul';
+    const listClassName = block.variant === 'ordered'
+      ? `${styles.postList} ${styles.orderedList}`
+      : `${styles.postList} ${styles.unorderedList}`;
+
+    return (
+      <ListTag key={index} className={listClassName}>
+        {block.items.map((item) => (
+          <li key={item}>{renderInlineText(item)}</li>
+        ))}
+      </ListTag>
+    );
+  }
+
+  if (block.type === 'code') {
+    return (
+      <pre key={index} className={styles.codeBlock}>
+        <code>{block.text}</code>
+      </pre>
+    );
+  }
+
+  return <p key={index}>{renderInlineText(block.text)}</p>;
 }
 
 export default function BlogPostPage() {
   const { slug } = useParams();
 
   const post = blogPosts.find((p) => p.slug === slug);
+  const recommendedPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
   if (!post) {
     return (
@@ -56,7 +110,7 @@ export default function BlogPostPage() {
               <User size={14} /> {post.author}
             </span>
             <span className={styles.metaItem}>
-              <Clock3 size={14} /> 4m
+              <Clock3 size={14} /> {post.readTime}
             </span>
           </div>
           <h1 className={styles.postTitle}>{post.title}</h1>
@@ -68,6 +122,30 @@ export default function BlogPostPage() {
         <div className={styles.postContent}>
           {post.content.map((block, index) => renderContentBlock(block, index))}
         </div>
+
+        {recommendedPosts.length > 0 && (
+          <section className={styles.recommendSection}>
+            <div className={styles.recommendHeader}>
+              <p className={styles.recommendEyebrow}></p>
+              <h2 className={styles.recommendTitle}>Also read</h2>
+            </div>
+
+            <div className={styles.recommendGrid}>
+              {recommendedPosts.map((recommendedPost) => (
+                <Link
+                  key={recommendedPost.slug}
+                  href={`/${recommendedPost.slug}`}
+                  className={styles.recommendCard}
+                >
+                  <p className={styles.recommendMeta}>{recommendedPost.date}</p>
+                  <h3 className={styles.recommendCardTitle}>{recommendedPost.title}</h3>
+                  <p className={styles.recommendExcerpt}>{recommendedPost.excerpt}</p>
+                  <span className={styles.recommendLink}>Read this next</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
       </main>
       <BlogFooter />
     </div>
