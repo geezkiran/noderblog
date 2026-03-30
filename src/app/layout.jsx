@@ -2,7 +2,6 @@ import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 import { Geist, Instrument_Serif, Instrument_Sans, Sulphur_Point } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({ 
   subsets: ['latin'], 
