@@ -4,6 +4,7 @@ import { useParams } from 'next/navigation';
 import { ArrowLeft, Calendar, User, Clock3 } from 'lucide-react';
 import BlogNavbar from '../../components/Blog/BlogNavbar';
 import BlogFooter from '../../components/Blog/BlogFooter';
+import BlogCard from '../../components/Blog/BlogCard';
 import { blogPosts } from '../../data/blogData';
 import styles from '../../components/Blog/Blog.module.css';
 
@@ -131,17 +132,8 @@ export default function BlogPostPage() {
             </div>
 
             <div className={styles.recommendGrid}>
-              {recommendedPosts.map((recommendedPost) => (
-                <Link
-                  key={recommendedPost.slug}
-                  href={`/${recommendedPost.slug}`}
-                  className={styles.recommendCard}
-                >
-                  <p className={styles.recommendMeta}>{recommendedPost.date}</p>
-                  <h3 className={styles.recommendCardTitle}>{recommendedPost.title}</h3>
-                  <p className={styles.recommendExcerpt}>{recommendedPost.excerpt}</p>
-                  <span className={styles.recommendLink}>Read this next</span>
-                </Link>
+              {recommendedPosts.map((recommendedPost, i) => (
+                <BlogCard key={recommendedPost.slug} post={recommendedPost} index={i} />
               ))}
             </div>
           </section>
