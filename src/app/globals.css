@@ -38,7 +38,7 @@ html.dark {
   --text-primary: #f5f5f7;
   --text-secondary: #aeaeae;
   --border-color: rgb(245 245 247 / 0.10);
-  --dot-color: rgba(255, 255, 255, 0.20);
+  --dot-color: rgba(255, 255, 255, 0.16);
   --text-weight: 500;
   --overlay-color: #090909ea;
 
@@ -59,7 +59,7 @@ html.dark {
 }
 
 body {
-  background-color: var(--bg-color);
+ 
   color: var(--text-primary);
   max-width: 100%;
   margin: 0 auto;
