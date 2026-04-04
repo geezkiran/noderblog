@@ -15,7 +15,7 @@ export const blogPosts = [
   {
     title: "The Learning Index: The Productivity Tool You're Overlooking",
     slug: "map-before-you-march",
-    date: "March 30, 2026",
+    date: "November 21, 2025",
     author: "Kiran ",
     excerpt: "Starting without a map is how smart people waste years going in circles. A learning index turns scattered effort into deliberate progress.",
     image: img1,
@@ -355,7 +355,7 @@ export const blogPosts = [
   {
     title: "Knowledge Isn't Missing, It's Inaccessible.",
     slug: "knowledge-isnt-missing-its-inaccessible",
-    date: "March 30, 2026",
+    date: "January 30, 2026",
     author: "Kiran",
     excerpt: "The real crisis of the information age is not a shortage of knowledge, but a structural failure in how we access and retain it.",
     image: img2,

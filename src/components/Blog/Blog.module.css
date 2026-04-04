@@ -290,7 +290,7 @@
   margin: 40px 0;
   color: var(--text-primary);
   line-height: 1.5;
-
+  font-weight: 400;
 }
 
 .inlineHighlight {
@@ -386,7 +386,7 @@
 .recommendCard:hover {
   
   box-shadow: var(--shadow-md);
-  border-color: rgba(210, 210, 210, 0.484);
+  transform: translateY(3px);
 }
 
 .recommendMeta {
