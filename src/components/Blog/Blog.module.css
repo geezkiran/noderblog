@@ -496,7 +496,8 @@
 
   .postContent p {
     font-size: 20px;
-    line-height: 1.4;
+    line-height: 1.3;
+    font-weight: 400;
   }
 
   .postContent .featuredHeading {
