@@ -81,7 +81,7 @@
 .blogCard:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
-  border-color: color-mix(in srgb, var(--text-primary) 28%, var(--border-color));
+
 }
 
 .cardImageContainer {
@@ -162,6 +162,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
 .cardLink {
   text-decoration: none;
   color: inherit;
@@ -223,7 +224,7 @@
   letter-spacing: -0.01em;
   line-height: 1.1;
   padding: 10px 0;
-  
+
 }
 
 .postHeroImage {
@@ -249,15 +250,15 @@
 
 
 .postContent {
-  font-size: 17px;
+  font-size: 22px;
   line-height: 1.8;
   color: var(--text-primary);
- padding: 20px 0;
+  padding: 20px 0;
 }
 
 .postContent h2 {
   font-family: var(--font-instrument-serif);
-  font-size: 26px;
+  font-size: 28px;
   margin: 48px 0 24px;
   font-weight: 200;
   line-height: 1.3;
@@ -273,9 +274,9 @@
 
 .postContent p {
   font-family: var(--font-geist-sans), sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   margin-bottom: 24px;
-  line-height: 1.5;
+  line-height: 1.4;
   font-weight: 300;
   letter-spacing: -0.0em;
   color: var(--text-secondary);
@@ -384,7 +385,7 @@
 }
 
 .recommendCard:hover {
-  
+
   box-shadow: var(--shadow-md);
   transform: translateY(3px);
 }
@@ -480,17 +481,26 @@
     width: 12px;
     height: 12px;
   }
+
+  .postContent h2 {
+    font-size: 34px;
+    margin: 48px 0 24px;
+    font-weight: 200;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+  }
+
   .imageDescription {
     margin: 6px 0 10px;
   }
 
   .postContent p {
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 20px;
+    line-height: 1.4;
   }
 
   .postContent .featuredHeading {
-    font-size: 32px;
+    font-size: 36px;
     margin-top: 56px;
   }
 
