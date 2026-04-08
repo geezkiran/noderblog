@@ -147,16 +147,16 @@ export const blogPosts = [
       },
       {
         type: "heading",
-        text: "Step 1 | Survey the Landscape",
+        text: "Survey the Landscape",
       },
       {
         type: "paragraph",
         text: "Don't start learning yet. Start mapping. Open 5-7 high-quality sources and skim for topics, not content. You're looking for recurring vocabulary, section headers, and chapter names.",
       },
-      
+
       {
         type: "heading",
-        text: "Step 2 | Impose Structure",
+        text: "Impose Structure",
       },
       {
         type: "paragraph",
@@ -174,7 +174,7 @@ export const blogPosts = [
       },
       {
         type: "heading",
-        text: "Step 3 | Map Dependencies ",
+        text: "Map Dependencies ",
       },
       {
         type: "paragraph",
@@ -191,7 +191,7 @@ export const blogPosts = [
       },
       {
         type: "heading",
-        text: "Step 4 | Assign Effort and Priority ",
+        text: "Assign Effort and Priority ",
       },
       {
         type: "list",
@@ -208,7 +208,7 @@ export const blogPosts = [
       },
       {
         type: "heading",
-        text: "Step 5 | Leave Blanks Intentionally",
+        text: "Leave Blanks Intentionally",
       },
       {
         type: "paragraph",
@@ -216,11 +216,7 @@ export const blogPosts = [
       },
       {
         type: "heading",
-        text: "Common Mistakes",
-      },
-      {
-        type: "heading",
-        text: "Mistake 1 | Waiting for the Perfect Index",
+        text: "Don't Wait for the Perfect Index",
       },
       {
         type: "paragraph",
@@ -232,15 +228,7 @@ export const blogPosts = [
       },
       {
         type: "heading",
-        text: "Mistake 2 | Copying Someone Else's Roadmap Verbatim",
-      },
-      {
-        type: "paragraph",
-        text: "Community-made roadmaps are useful starting points, but they're built for the average learner. You have specific prior knowledge, a specific job context, and specific goals. Use external roadmaps as input, then build your own.",
-      },
-      {
-        type: "heading",
-        text: "Mistake 3 | Confusing Topics with Resources",
+        text: "Topics and Resources are NOT the Same",
       },
       {
         type: "paragraph",
@@ -257,7 +245,7 @@ export const blogPosts = [
       },
       {
         type: "heading",
-        text: "Mistake 4 | No Exit Criteria",
+        text: "No Exit Criteria",
       },
       {
         type: "paragraph",
@@ -274,7 +262,7 @@ export const blogPosts = [
       },
       {
         type: "heading",
-        text: "The Broader Principle | Structure Enables Speed",
+        text: "Structure Enables Speed",
       },
       {
         type: "paragraph",
@@ -317,23 +305,7 @@ export const blogPosts = [
       },
       {
         type: "heading",
-        text: "Conclusion",
-      },
-      {
-        type: "paragraph",
-        text: "Learning is work. Time is scarce. The instinct to just start feels efficient but usually isn't when you're learning something substantial.",
-      },
-      {
-        type: "paragraph",
-        text: "Building a learning index before you begin is the difference between wandering through a forest and navigating it with a map. The map doesn't remove the work. It makes the work count.",
-      },
-      {
-        type: "paragraph",
-        text: "The highest-leverage hour you'll spend on any new skill is the one before you start: stepping back, surveying the territory, and building your own index of what mastery actually looks like.",
-      },
-      {
-        type: "heading",
-        text: "Key Takeaways",
+        text: "Here's a Summary",
       },
       {
         type: "list",
@@ -347,9 +319,9 @@ export const blogPosts = [
           "Define done. Every section needs exit criteria, or you'll never know when to move on.",
         ],
       },
-      
-      
-      
+
+
+
     ]
   },
   {
@@ -361,7 +333,7 @@ export const blogPosts = [
     image: img2,
     get readTime() { return calcReadTime(this.content); },
     content: [
-     
+
       {
         type: "heading",
         text: "The Paradox at the Center of Modern Learning",
@@ -464,7 +436,7 @@ export const blogPosts = [
       },
       {
         type: "heading",
-        text: "The Deeper Problem | Noise Structured Like Signal",
+        text: "Noise Structured Like Signal",
       },
       {
         type: "paragraph",
