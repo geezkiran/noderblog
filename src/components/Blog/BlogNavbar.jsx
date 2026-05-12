@@ -25,7 +25,7 @@ export default function BlogNavbar() {
       <nav className={styles.navbar}>
         <div className={styles.navbarLeft}>
           <a href="https://noderhq.com" className={styles.navbarLogo}>
-            <img src={logo.src} alt="Noder" className={styles.logoIcon} />
+            <img src={logoMob.src} alt="Noder" className={styles.logoIcon} />
             <img src={logoMob.src} alt="Noder Mobile" className={styles.logoIconMob} />
           </a>
           <div className={styles.divider} />
@@ -33,7 +33,6 @@ export default function BlogNavbar() {
         </div>
 
         <div className={styles.navbarRight}>
-          <ThemeToggle />
         </div>
       </nav>
     </div>

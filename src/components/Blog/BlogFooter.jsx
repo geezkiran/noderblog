@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import SectionBadge from '../ui/SectionBadge';
 import styles from './BlogFooter.module.css';
 
 const blogFooterLinks = [
@@ -22,7 +23,7 @@ export default function BlogFooter() {
         transition={{ duration: 0.45 }}
       >
         <div className={styles.footerTop}>
-          <p className={styles.kicker}>User Journal</p>
+          <SectionBadge>User Journal</SectionBadge>
           <h3 className={styles.title}>The Learning Log</h3>
         </div>
 

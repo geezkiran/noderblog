@@ -6,6 +6,7 @@ import BlogNavbar from '../../components/Blog/BlogNavbar';
 import BlogFooter from '../../components/Blog/BlogFooter';
 import BlogCard from '../../components/Blog/BlogCard';
 import { blogPosts } from '../../data/blogData';
+import SectionBadge from '../../components/ui/SectionBadge';
 import styles from '../../components/Blog/Blog.module.css';
 
 function renderInlineText(text) {
@@ -127,7 +128,7 @@ export default function BlogPostPage() {
         {recommendedPosts.length > 0 && (
           <section className={styles.recommendSection}>
             <div className={styles.recommendHeader}>
-              <p className={styles.recommendEyebrow}></p>
+              <SectionBadge>Discover More</SectionBadge>
               <h2 className={styles.recommendTitle}>Also read</h2>
             </div>
 

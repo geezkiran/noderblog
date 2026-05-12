@@ -15,12 +15,6 @@ export default function BlogHeader() {
           transition={{ duration: 0.6 }}
         >
 
-          <Link href="/">
-            <img src={logo.src} alt="Noder Logo" className={styles.title} width={150} />
-          </Link>
-          <p className={styles.description} style={{ maxWidth: '450px' }}>
-            Insights, updates, and deep dives into the future of organized learning.
-          </p>
         </motion.div>
       </div>
       <div className={styles.headerVisual}>

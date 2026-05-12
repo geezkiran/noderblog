@@ -34,10 +34,6 @@ export default function BlogCard({ post, index }) {
 
           <h3 className={`${styles.cardTitle} ${styles.clampTwoLines}`}>{post.title}</h3>
           <p className={`${styles.cardExcerpt} ${styles.clampTwoLines}`}>{post.excerpt}</p>
-
-          <div className={styles.readMore}>
-            READ MORE <ArrowRight size={16} />
-          </div>
         </div>
       </Link>
     </motion.div>

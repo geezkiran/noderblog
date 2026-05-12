@@ -1,11 +1,16 @@
 import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
-import { Geist, Instrument_Serif, Instrument_Sans, Sulphur_Point } from "next/font/google";
+import { Geist, Instrument_Serif, Instrument_Sans, Sulphur_Point, Cormorant_Garamond, Archivo } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 const geistSans = Geist({ 
   subsets: ['latin'], 
   variable: '--font-geist-sans' 
+});
+
+const archivo = Archivo({
+  subsets: ['latin'],
+  variable: '--font-archivo',
 });
 
 const instrumentSerif = Instrument_Serif({
@@ -25,6 +30,12 @@ const sulphurPoint = Sulphur_Point({
   variable: '--font-sulphur-point',
 });
 
+const cormorantGaramond = Cormorant_Garamond({
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-cormorant',
+});
+
 export const metadata = {
   title: 'Noder',
   description: 'Light Speed Learning',
@@ -40,9 +51,11 @@ export default function RootLayout({ children }) {
       className={cn(
         "font-sans", 
         geistSans.variable, 
+        archivo.variable,
         instrumentSerif.variable,
         instrumentSans.variable,
-        sulphurPoint.variable
+        sulphurPoint.variable,
+        cormorantGaramond.variable
       )} 
       suppressHydrationWarning
     >
