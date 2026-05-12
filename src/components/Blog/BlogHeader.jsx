@@ -9,13 +9,7 @@ export default function BlogHeader() {
   return (
     <section className={styles.blogHeader}>
       <div className={styles.headerContent}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
 
-        </motion.div>
       </div>
       <div className={styles.headerVisual}>
         <div className={styles.gridOverlay} />
