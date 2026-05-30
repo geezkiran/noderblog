@@ -374,10 +374,7 @@ export const blogPosts = [
         type: "heading",
         text: "The Four Walls of Inaccessibility",
       },
-      {
-        type: "paragraph",
-        text: "The problem is structural, and it operates at four distinct layers.",
-      },
+
       {
         type: "heading",
         text: "1. You Can't Search for What You Don't Know Exists",
