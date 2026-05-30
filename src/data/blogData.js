@@ -463,10 +463,7 @@ export const blogPosts = [
         type: "heading",
         text: "The Real Diagnosis",
       },
-      {
-        type: "paragraph",
-        text: "Knowledge is not the problem. Organization is.",
-      },
+
       {
         type: "paragraph",
         text: "People struggle to locate what matters not because information is absent, but because the environment is built to distribute and broadcast, not to structure and navigate.",
