@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
 
 .articlePage {
-  --bg-primary: #080808;
-  --bg-section: #0d0d0d;
-  --bg-card: #111111;
-  --border: rgba(255,255,255,0.07);
-  --border-strong: rgba(255,255,255,0.12);
-  --text-primary: #f0ece4;
-  --text-secondary: #8a8680;
-  --text-tertiary: #4a4845;
+  --bg-primary: #ffffff;
+  --bg-section: #f9fafb;
+  --bg-card: #f3f4f6;
+  --border: rgba(0,0,0,0.1);
+  --border-strong: rgba(0,0,0,0.15);
+  --text-primary: #000000;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
   --accent: #c8b89a;
   --accent-dim: rgba(200,184,154,0.15);
   --font: 'Archivo', sans-serif;
-  --content-width: 680px;
+  --content-width: 640px;
   --wide-width: 960px;
 
   background: var(--bg-primary);
@@ -44,7 +44,7 @@
 }
 
 .headerScrolled {
-  background: rgba(8, 8, 8, 0.88);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }

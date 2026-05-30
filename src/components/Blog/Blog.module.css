@@ -117,7 +117,7 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.04);
   backdrop-filter: blur(12px);
   padding: 6px 14px;
   border-radius: 30px;
@@ -217,7 +217,7 @@
 /* --- Blog Post Template --- */
 .postLayout {
   padding: 80px 20px 120px;
-  max-width: 760px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -243,10 +243,10 @@
 }
 
 .postTitle {
-  font-family: var(--font-instrument-serif), serif;
-  font-size: 40px;
+  font-family: var(--font-spectral), serif;
+  font-size: 35px;
   font-weight: 300;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.05em;
   line-height: 1.25;
   padding: 10px 0;
   color: var(--text-primary);
@@ -278,7 +278,7 @@
   font-family: var(--font-spectral), serif;
   font-size: 18px;
   line-height: 1.5;
-  color: var(--text-primary);
+  color: var(--text-secondary);
   padding: 20px 0;
 }
 
@@ -307,7 +307,7 @@
   margin-bottom: 28px;
   line-height: 1.6;
   font-weight: 200;
-  color: var(--text-primary);
+  color: var(--text-secondary);
   letter-spacing: 0.01em;
 }
 
@@ -527,7 +527,7 @@
   }
 
   .postTitle {
-    font-size: 32px;
+    font-size: 28px;
     text-align: left;
   }
 
@@ -597,7 +597,7 @@
 }
 
 .navbarScrolled {
-  background-color: rgba(9, 9, 9, 0.533);
+  background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
