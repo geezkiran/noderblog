@@ -8,7 +8,7 @@
   --bg-color: #090909;
   --bg-secondary: #121212;
   --text-primary: #f3f3f3;
-  --text-secondary: #8f9294;
+  --text-secondary: #dfdfdf;
   --text-tertiary: #666666;
   --success: #22c55e;
   --danger: #ef4444;
@@ -45,7 +45,7 @@ body {
   color: var(--text-primary);
   max-width: 100%;
   margin: 0 auto;
-  font-family: var(--font-archivo), sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: -0.01em;
@@ -62,7 +62,8 @@ h1 {
   color: var(--text-primary);
 }
 
-h2, h3 {
+h2,
+h3 {
   font-weight: 400;
   letter-spacing: -0.02em;
   color: var(--text-primary);
@@ -73,8 +74,9 @@ h2, h3 {
     font-size: 38px;
     text-align: left;
   }
-  
-  .container, section {
+
+  .container,
+  section {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }

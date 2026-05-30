@@ -89,8 +89,9 @@
 }
 
 .title {
+  font-family: var(--font-instrument-serif), serif;
   font-size: clamp(36px, 5vw, 60px);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.05;
   letter-spacing: -0.03em;
   color: var(--text-primary);
@@ -130,6 +131,13 @@
 }
 
 /* 3. ARTICLE BODY */
+.articlePage .bodyContainer p,
+.articlePage .bodyContainer ul li,
+.articlePage .bodyContainer ol li,
+.articlePage .pullQuoteText {
+  font-family: var(--font-spectral), serif;
+}
+
 .bodyContainer {
   max-width: var(--content-width);
   margin: 0 auto;

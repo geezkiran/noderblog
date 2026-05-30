@@ -2,7 +2,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Calendar, Clock3, ArrowRight } from 'lucide-react';
 import styles from './Blog.module.css';
 
 export default function BlogCard({ post, index }) {
@@ -22,15 +21,6 @@ export default function BlogCard({ post, index }) {
         <div className={styles.cardContent}>
           <h3 className={`${styles.cardTitle} ${styles.clampOneLine}`}>{post.title}</h3>
           <p className={`${styles.cardExcerpt} ${styles.clampTwoLines}`}>{post.excerpt}</p>
-
-          <div className={styles.cardMeta}>
-            <span className={`${styles.metaItem} ${styles.dateMeta}`}>
-              <Calendar size={12} /> {post.date}
-            </span>
-            <span className={styles.metaItem}>
-              <Clock3 size={14} /> {post.readTime}
-            </span>
-          </div>
         </div>
       </Link>
     </motion.div>

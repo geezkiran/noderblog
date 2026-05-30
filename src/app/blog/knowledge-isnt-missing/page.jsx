@@ -155,19 +155,7 @@ export default function ArticlePage() {
 
         <hr />
 
-        {/* 6. ARTICLE FOOTER / NEXT NAV */}
-        <footer className={styles.articleFooter}>
-          <div className={styles.tagsRow}>
-            <Link href="#" className={styles.tag}>Learning Theory</Link>
-            <Link href="#" className={styles.tag}>Productivity</Link>
-            <Link href="#" className={styles.tag}>Noder Ecosystem</Link>
-            <Link href="#" className={styles.tag}>Data Science</Link>
-          </div>
-          
-          <Link href="/" className={styles.backLink}>
-            &larr; Back to blog
-          </Link>
-        </footer>
+
       </article>
     </div>
   );

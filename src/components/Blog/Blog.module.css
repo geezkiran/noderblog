@@ -45,7 +45,7 @@
 
 .description {
   font-size: 16px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   line-height: 1.6;
   font-weight: 300;
   letter-spacing: -0.02em;
@@ -155,10 +155,10 @@
 }
 
 .cardTitle {
-  font-family: var(--font-archivo), sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
   font-size: 22px;
   font-weight: 300;
-  line-height: 1.3;
+  line-height: 1.4;
   margin-bottom: 12px;
   color: var(--text-primary);
   letter-spacing: -0.04em;
@@ -243,11 +243,11 @@
 }
 
 .postTitle {
-  font-family: var(--font-archivo), sans-serif;
-  font-size: 34px;
+  font-family: var(--font-instrument-serif), serif;
+  font-size: 40px;
   font-weight: 300;
-  letter-spacing: -0.05em;
-  line-height: 1.1;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
   padding: 10px 0;
   color: var(--text-primary);
 }
@@ -266,7 +266,7 @@
   line-height: 1.6;
   color: var(--text-secondary);
   font-family: var(--font-geist-sans), sans-serif;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
   text-align: center;
   padding: 10px 14px;
   border-radius: 10px;
@@ -275,14 +275,15 @@
 
 
 .postContent {
-  font-size: 16px;
-  line-height: 1.8;
+  font-family: var(--font-spectral), serif;
+  font-size: 18px;
+  line-height: 1.5;
   color: var(--text-primary);
   padding: 20px 0;
 }
 
 .postContent h2 {
-  font-family: var(--font-archivo);
+  font-family: var(--font-spectral), serif;
   font-size: 26px;
   margin: 56px 0 24px;
   font-weight: 300;
@@ -292,7 +293,7 @@
 }
 
 .postContent .featuredHeading {
-  font-size: 26px;
+  font-size: 32px;
   line-height: 1.12;
   margin-top: 64px;
   margin-bottom: 26px;
@@ -301,13 +302,13 @@
 }
 
 .postContent p {
-  font-family: var(--font-archivo), sans-serif;
+  font-family: var(--font-spectral), serif;
   font-size: 17px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   line-height: 1.6;
   font-weight: 300;
-  color: var(--text-secondary);
-  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  letter-spacing: 0.01em;
 }
 
 
@@ -315,15 +316,15 @@
   border-left: 4px solid var(--text-primary);
   padding-left: 20px;
   font-style: italic;
-  font-size: 16px;
+  font-size: 17px;
   margin: 40px 0;
-  color: var(--text-primary);
-  line-height: 1.5;
-  font-weight: 200;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  font-weight: 300;
 }
 
 .inlineHighlight {
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-weight: 300;
 }
 
@@ -342,12 +343,12 @@
 }
 
 .postList li {
-  font-family: var(--font-archivo), sans-serif;
+  font-family: var(--font-spectral), serif;
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 16px;
   font-weight: 300;
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .codeBlock {
@@ -387,9 +388,9 @@
 }
 
 .recommendTitle {
-  font-family: var(--font-instrument-serif), serif;
+  font-family: var(--font-spectral), serif;
   font-size: 34px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
@@ -398,6 +399,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+}
+
+.recommendGrid .cardMeta {
+  display: none;
+}
+
+.recommendGrid .cardContent {
+  padding-bottom: 24px;
 }
 
 .recommendCard {
@@ -476,6 +485,10 @@
     padding: 12px 12px 40px;
   }
 
+  .recommendGrid .cardContent {
+    padding-bottom: 12px;
+  }
+
   .cardMeta {
     position: absolute;
     bottom: 12px;
@@ -514,12 +527,12 @@
   }
 
   .postTitle {
-    font-size: 30px;
+    font-size: 32px;
     text-align: left;
   }
 
   .postContent h2 {
-    font-size: 26px;
+    font-size: 21px;
     margin: 40px 0 20px;
     font-weight: 400;
   }
@@ -537,6 +550,7 @@
     line-height: 1.6;
     font-weight: 300;
     margin-bottom: 28px;
+    letter-spacing: 0.01em;
     color: var(--text-primary);
   }
 
@@ -583,14 +597,18 @@
 }
 
 .navbarScrolled {
-  background-color: var(--bg-color);
-  backdrop-filter: blur(12px);
+  background-color: rgba(9, 9, 9, 0.533);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
 }
 
+.navbarHidden {
+  transform: translateY(-100%);
+}
+
 .navbar {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   height: 64px;
   display: flex;

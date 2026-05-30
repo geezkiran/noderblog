@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { ArrowLeft, Calendar, User, Clock3 } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import BlogNavbar from '../../components/Blog/BlogNavbar';
 import BlogFooter from '../../components/Blog/BlogFooter';
 import BlogCard from '../../components/Blog/BlogCard';
@@ -104,17 +104,7 @@ export default function BlogPostPage() {
         
 
         <article className={styles.postHeader}>
-          <div className={styles.cardMeta}>
-            <span className={styles.metaItem}>
-              <Calendar size={14} /> {post.date}
-            </span>
-            <span className={styles.metaItem}>
-              <User size={14} /> {post.author}
-            </span>
-            <span className={styles.metaItem}>
-              <Clock3 size={14} /> {post.readTime}
-            </span>
-          </div>
+
           <h1 className={styles.postTitle}>{post.title}</h1>
         </article>
 

@@ -11,17 +11,27 @@ import styles from './Blog.module.css';
 export default function BlogNavbar() {
   const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 20);
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 64) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      lastScrollY = currentScrollY;
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className={`${styles.navbarWrapper} ${isScrolled ? styles.navbarScrolled : ''}`}>
+    <div className={`${styles.navbarWrapper} ${isScrolled ? styles.navbarScrolled : ''} ${isVisible ? '' : styles.navbarHidden}`}>
       <nav className={styles.navbar}>
         <div className={styles.navbarLeft}>
           <a href="https://noderhq.com" className={styles.navbarLogo}>

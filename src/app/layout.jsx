@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
-import { Geist, Instrument_Serif, Instrument_Sans, Sulphur_Point, Cormorant_Garamond, Archivo } from "next/font/google";
+import { Geist, Instrument_Sans, Sulphur_Point, Spectral, Archivo, Instrument_Serif } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 const geistSans = Geist({ 
@@ -11,6 +11,12 @@ const geistSans = Geist({
 const archivo = Archivo({
   subsets: ['latin'],
   variable: '--font-archivo',
+});
+
+const spectral = Spectral({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-spectral',
 });
 
 const instrumentSerif = Instrument_Serif({
@@ -30,11 +36,7 @@ const sulphurPoint = Sulphur_Point({
   variable: '--font-sulphur-point',
 });
 
-const cormorantGaramond = Cormorant_Garamond({
-  weight: ['300', '400', '500', '600', '700'],
-  subsets: ['latin'],
-  variable: '--font-cormorant',
-});
+
 
 export const metadata = {
   title: 'Noder',
@@ -52,10 +54,10 @@ export default function RootLayout({ children }) {
         "font-sans", 
         geistSans.variable, 
         archivo.variable,
-        instrumentSerif.variable,
+        spectral.variable,
         instrumentSans.variable,
         sulphurPoint.variable,
-        cormorantGaramond.variable
+        instrumentSerif.variable
       )} 
       suppressHydrationWarning
     >
