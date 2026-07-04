@@ -42,8 +42,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "sans-serif"],
-        serif: ["var(--font-instrument-serif)", "serif"],
+        sans: ["var(--font-sf-pro)"],
+        serif: ["var(--font-spectral)", "serif"],
+        spectral: ["var(--font-spectral)", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

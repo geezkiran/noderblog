@@ -20,13 +20,13 @@
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 10px;
-  font-family: var(--font-archivo), sans-serif;
+  font-family: var(--font-sf-pro);
   color: var(--text-secondary);
 }
 
 .title {
   margin: 0;
-  font-family: var(--font-instrument-serif), serif;
+  font-family: var(--font-spectral), serif;
   font-size: clamp(26px, 7vw, 50px);
   font-weight: 400;
   line-height: 1.15;
@@ -55,7 +55,7 @@
   gap: 4px;
   text-decoration: none;
   color: var(--text-secondary);
-  font-family: var(--font-archivo), sans-serif;
+  font-family: var(--font-sf-pro);
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -69,7 +69,7 @@
 .meta {
   margin: 0;
   color: var(--text-tertiary);
-  font-family: var(--font-archivo), sans-serif;
+  font-family: var(--font-sf-pro);
   font-size: 12px;
   font-weight: 300;
 }

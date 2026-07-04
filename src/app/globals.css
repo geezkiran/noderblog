@@ -25,8 +25,9 @@
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   --logo-filter: invert(1);
-  --font-heading: var(--font-archivo);
-  --font-sans: var(--font-archivo);
+  --font-sf-pro: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-heading: var(--font-sf-pro);
+  --font-sans: var(--font-sf-pro);
 }
 
 /* Force Dark Mode Aesthetic by default as per Noder System */
@@ -45,7 +46,7 @@ body {
   color: var(--text-primary);
   max-width: 100%;
   margin: 0 auto;
-  font-family: var(--font-geist-sans), sans-serif;
+  font-family: var(--font-sf-pro);
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: -0.01em;
@@ -93,7 +94,7 @@ h3 {
   padding: 8px 25px;
   border-radius: 20px;
   font-size: 12px;
-  font-family: var(--font-archivo), sans-serif;
+  font-family: var(--font-sf-pro);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -136,7 +137,7 @@ h3 {
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 12px;
-  font-family: var(--font-archivo), sans-serif;
+  font-family: var(--font-sf-pro);
   font-weight: 400;
   letter-spacing: -0.01em;
   color: var(--text-primary);
@@ -150,7 +151,7 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--text-secondary);
-  font-family: var(--font-archivo), sans-serif;
+  font-family: var(--font-sf-pro);
 }
 
 /* ── Reveal animation ───────────────────────────────────────── */
@@ -198,7 +199,7 @@ h3 {
   }
 
   html {
-    font-family: var(--font-archivo), sans-serif;
+    font-family: var(--font-sf-pro);
   }
 }
 
@@ -228,7 +229,7 @@ h3 {
   height: 32px;
   border-radius: 999px;
   cursor: pointer;
-  font-family: var(--font-geist-sans), sans-serif;
+  font-family: var(--font-sf-pro);
   letter-spacing: -0.01em;
   transition: all 0.2s ease;
   line-height: 1;

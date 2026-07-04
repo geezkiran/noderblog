@@ -16,7 +16,9 @@ export const blogPosts = [
     title: "The Learning Index: The Productivity Tool You're Overlooking",
     slug: "map-before-you-march",
     date: "November 21, 2025",
-    author: "Kiran ",
+    author: "Kiran",
+    tag: "Productivity",
+    relevance: "Essential",
     excerpt: "Starting without a map is how smart people waste years going in circles. A learning index turns scattered effort into deliberate progress.",
     image: img1,
     get readTime() { return calcReadTime(this.content); },
@@ -329,6 +331,8 @@ export const blogPosts = [
     slug: "knowledge-isnt-missing-its-inaccessible",
     date: "January 30, 2026",
     author: "Kiran",
+    tag: "Knowledge Systems",
+    relevance: "Foundational",
     excerpt: "The real crisis of the information age is not a shortage of knowledge, but a structural failure in how we access and retain it.",
     image: img2,
     get readTime() { return calcReadTime(this.content); },
@@ -336,7 +340,7 @@ export const blogPosts = [
 
       {
         type: "heading",
-        text: "The Paradox at the Center of Modern Learning",
+        text: "The Paradox of Modern Learning",
       },
       {
         type: "paragraph",
@@ -375,57 +379,26 @@ export const blogPosts = [
         text: "The Four Walls of Inaccessibility",
       },
 
-      {
-        type: "heading",
-        text: "1. You Can't Search for What You Don't Know Exists",
-      },
+      
       {
         type: "paragraph",
-        text: "Search engines are strong recall tools, but weak discovery tools. They answer questions you ask, not the questions you still do not know to ask.",
+        text: "^[1]^ Search engines are strong recall tools, but weak discovery tools. They answer questions you ask, not the questions you still do not know to ask.\nA new learner in distributed systems may not know terms like eventual consistency. A beginner in ML may not know to look for the bias-variance tradeoff. The door exists, but the vocabulary to open it does not.",
       },
+      
       {
         type: "paragraph",
-        text: "A new learner in distributed systems may not know terms like eventual consistency. A beginner in ML may not know to look for the bias-variance tradeoff. The door exists, but the vocabulary to open it does not.",
+        text: "^[2]^ Even when learners find a starting point, the landscape ahead is trackless. There is no universally clear sequence from beginner to advanced, and no obvious map of prerequisites.\nMany self-directed learners do not progress; they circle. They repeat introductory content, mistake familiarity for understanding, and fail to reach compounding depth.",
       },
-      {
-        type: "heading",
-        text: "2. There Is No Path",
-      },
+      
+      
       {
         type: "paragraph",
-        text: "Even when learners find a starting point, the landscape ahead is trackless. There is no universally clear sequence from beginner to advanced, and no obvious map of prerequisites.",
+        text: "^[3]^ Much of the most useful knowledge is buried in long containers: long videos, long books, long podcasts, long threads. The key insight may be five minutes in four hours of content.\nThere is rarely a robust indexing layer that extracts and surfaces those moments without requiring full consumption of the container.",
       },
+      
       {
         type: "paragraph",
-        text: "Many self-directed learners do not progress; they circle. They repeat introductory content, mistake familiarity for understanding, and fail to reach compounding depth.",
-      },
-      {
-        type: "paragraph",
-        text: "This is not a motivation failure. It is a navigation failure.",
-      },
-      {
-        type: "heading",
-        text: "3. The Knowledge Is Buried",
-      },
-      {
-        type: "paragraph",
-        text: "Much of the most useful knowledge is buried in long containers: long videos, long books, long podcasts, long threads. The key insight may be five minutes in four hours of content.",
-      },
-      {
-        type: "paragraph",
-        text: "There is rarely a robust indexing layer that extracts and surfaces those moments without requiring full consumption of the container.",
-      },
-      {
-        type: "heading",
-        text: "4. Nothing Sticks",
-      },
-      {
-        type: "paragraph",
-        text: "Even when knowledge is found and consumed, retention collapses quickly. The forgetting curve shows steep drop-off in recall within days unless content is revisited with deliberate reinforcement.",
-      },
-      {
-        type: "paragraph",
-        text: "Most mainstream learning products still treat learning as one-time consumption, not a system of revisit, retrieval, and durable memory.",
+        text: "^[4]^ Even when knowledge is found and consumed, retention collapses quickly. The forgetting curve shows steep drop-off in recall within days unless content is revisited with deliberate reinforcement.\nMost mainstream learning products still treat learning as one-time consumption, not a system of revisit, retrieval, and durable memory.",
       },
       {
         type: "quote",
@@ -488,14 +461,7 @@ export const blogPosts = [
         type: "paragraph",
         text: "This does not require more content. It requires better architecture around the content we already have.",
       },
-      {
-        type: "heading",
-        text: "The Path Forward",
-      },
-      {
-        type: "paragraph",
-        text: "The future of learning is not more publishing. It is better indexing, better mapping, and better systems for retrieval and reinforcement.",
-      },
+      
       {
         type: "paragraph",
         text: "Every major leap in knowledge transmission was an organizational revolution: printing, libraries, encyclopedias, curricula. The next leap will be organizational too.",
